@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>K'Bookstore – Nhà sách yêu thích của bạn</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body data-spy="scroll" data-target="#mainNav" data-offset="70">
+
+<!-- ========== NAVBAR ========== -->
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarMenu">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">
+        <span class="brand-k">K'</span><span class="brand-book">Bookstore</span>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarMenu">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a class="nav-link-custom" href="#about"><i class="fa fa-info-circle" aria-hidden="true"></i> Giới thiệu</a></li>
+        <li><a class="nav-link-custom" href="#services"><i class="fa fa-th-list" aria-hidden="true"></i> Thể loại</a></li>
+        <li><a class="nav-link-custom" href="#portfolio"><i class="fa fa-star" aria-hidden="true"></i> Nổi bật</a></li>
+        <li><a class="nav-link-custom" href="#pricing"><i class="fa fa-ticket" aria-hidden="true"></i> Gói thành viên</a></li>
+        <li><a class="nav-link-custom" href="#contact"><i class="fa fa-paper-plane" aria-hidden="true"></i> Liên hệ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ========== BANNER / CAROUSEL ========== -->
+<section id="banner">
+  <div id="mainCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#mainCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#mainCarousel" data-slide-to="1"></li>
+      <li data-target="#mainCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="item active">
+        <div class="carousel-slide slide-1">
+          <div class="carousel-caption-custom">
+            <h1>Khám phá thế giới qua từng trang sách</h1>
+            <p>Hàng ngàn đầu sách hay đang chờ bạn</p>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="carousel-slide slide-2">
+          <div class="carousel-caption-custom">
+            <h1>Sách văn học kinh điển & hiện đại</h1>
+            <p>Bộ sưu tập phong phú từ khắp nơi trên thế giới</p>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="carousel-slide slide-3">
+          <div class="carousel-caption-custom">
+            <h1>Ưu đãi hội viên lên đến 40%</h1>
+            <p>Đăng ký ngay hôm nay để nhận nhiều quyền lợi hấp dẫn</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="left carousel-control" href="#mainCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#mainCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </div>
+
+  <!-- Search form nằm trên banner -->
+  <div class="banner-search">
+    <div class="container">
+      <form id="searchForm" class="search-form-wrap" onsubmit="return false;">
+        <div class="input-group">
+          <input type="text" id="searchInput" class="form-control search-input" placeholder="Tìm kiếm sách, tác giả, thể loại..."/>
+          <span class="input-group-btn">
+            <button class="btn btn-search" type="button"><span class="glyphicon glyphicon-search"></span> Tìm kiếm</button>
+          </span>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ABOUT ========== -->
+<section id="about" class="section-pad">
+  <div class="container">
+    <div class="section-title text-center">
+      <h2>Giới thiệu</h2>
+      <div class="title-bar"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <h3>Chào mừng đến với K'Bookstore</h3>
+        <p>K'Bookstore là nhà sách trực tuyến uy tín hàng đầu Việt Nam, được thành lập năm 2015 với sứ mệnh mang tri thức đến gần hơn với mọi người. Chúng tôi cung cấp hơn <strong>50,000 đầu sách</strong> thuộc nhiều thể loại khác nhau — từ văn học, khoa học, kinh tế, thiếu nhi cho đến sách ngoại văn.</p>
+        <p>Với đội ngũ chuyên gia tuyển chọn sách kỹ lưỡng và hệ thống giao hàng toàn quốc, K'Bookstore cam kết mang đến trải nghiệm mua sắm tiện lợi, an toàn và nhanh chóng nhất cho độc giả.</p>
+        <p>Chúng tôi tin rằng mỗi cuốn sách là một hành trình — và K'Bookstore chính là người bạn đồng hành đáng tin cậy trên mọi hành trình tri thức của bạn.</p>
+        <a href="about.html" class="btn btn-primary-custom">Xem thêm về chúng tôi <span class="glyphicon glyphicon-arrow-right"></span></a>
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="about-img-wrap">
+          <img src="images/about.jpg" alt="K'Bookstore" class="img-responsive img-rounded about-img" onerror="this.src='https://via.placeholder.com/350x280/2c3e50/ffffff?text=K%27Bookstore'"/>
+          <div class="about-stats">
+            <div class="stat-item"><i class="fa fa-book" style="color: #f39c12; margin-bottom: 5px; font-size: 20px;"></i><br><strong>50K+</strong><span>Đầu sách</span></div>
+            <div class="stat-item"><i class="fa fa-users" style="color: #f39c12; margin-bottom: 5px; font-size: 20px;"></i><br><strong>200K+</strong><span>Khách hàng</span></div>
+            <div class="stat-item"><i class="fa fa-calendar-check-o" style="color: #f39c12; margin-bottom: 5px; font-size: 20px;"></i><br><strong>9+</strong><span>Năm hoạt động</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SERVICES / THỂ LOẠI SÁCH ========== -->
+<section id="services" class="section-pad bg-light">
+  <div class="container">
+    <div class="section-title text-center">
+      <h2>Thể loại sách</h2>
+      <div class="title-bar"></div>
+      <p class="section-sub">Khám phá kho tàng sách đa dạng tại K'Bookstore</p>
+    </div>
+    <div class="row">
+
+      <div class="col-md-4 col-sm-6">
+        <div class="service-card">
+          <div class="service-icon"><span class="glyphicon glyphicon-book"></span></div>
+          <h4>Văn học & Tiểu thuyết</h4>
+          <p>Những tác phẩm văn học kinh điển và đương đại từ các tác giả nổi tiếng trong nước và quốc tế.</p>
+          <a href="service1.html" class="btn btn-outline-custom">Xem chi tiết</a>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="service-card">
+          <div class="service-icon"><span class="glyphicon glyphicon-education"></span></div>
+          <h4>Sách Kinh tế & Kinh doanh</h4>
+          <p>Bộ sưu tập sách quản trị, khởi nghiệp, tài chính và phát triển bản thân cho doanh nhân hiện đại.</p>
+          <a href="service2.html" class="btn btn-outline-custom">Xem chi tiết</a>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="service-card">
+          <div class="service-icon"><span class="glyphicon glyphicon-heart"></span></div>
+          <h4>Sách Thiếu nhi</h4>
+          <p>Truyện tranh, sách tô màu, truyện cổ tích và sách giáo dục dành riêng cho các bé từ 0–15 tuổi.</p>
+          <a href="service3.html" class="btn btn-outline-custom">Xem chi tiết</a>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="service-card">
+          <div class="service-icon"><span class="glyphicon glyphicon-flash"></span></div>
+          <h4>Khoa học & Công nghệ</h4>
+          <p>Sách lập trình, khoa học dữ liệu, trí tuệ nhân tạo và các xu hướng công nghệ tiên tiến nhất.</p>
+          <a href="service4.html" class="btn btn-outline-custom">Xem chi tiết</a>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="service-card">
+          <div class="service-icon"><span class="glyphicon glyphicon-globe"></span></div>
+          <h4>Sách Ngoại văn</h4>
+          <p>Phong phú các đầu sách tiếng Anh, Pháp, Nhật, Hàn từ các nhà xuất bản quốc tế danh tiếng.</p>
+          <a href="service5.html" class="btn btn-outline-custom">Xem chi tiết</a>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="service-card">
+          <div class="service-icon"><span class="glyphicon glyphicon-star"></span></div>
+          <h4>Tâm lý & Kỹ năng sống</h4>
+          <p>Sách phát triển bản thân, tâm lý học, thiền định và nghệ thuật sống hạnh phúc mỗi ngày.</p>
+          <a href="service6.html" class="btn btn-outline-custom">Xem chi tiết</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== PORTFOLIO: Sách nổi bật + Đánh giá khách hàng ========== -->
+<section id="portfolio" class="section-pad">
+  <div class="container">
+    <div class="section-title text-center">
+      <h2>Sách nổi bật</h2>
+      <div class="title-bar"></div>
+      <p class="section-sub">Những cuốn sách được yêu thích nhất tại K'Bookstore</p>
+    </div>
+
+    <!-- Hàng 1: Sách nổi bật -->
+    <div class="row portfolio-row">
+      <div class="col-md-3 col-sm-6">
+        <div class="portfolio-card">
+          <div class="portfolio-img">
+            <img src="images/book1.jpg" alt="Sách 1" class="img-responsive" onerror="this.src='https://via.placeholder.com/220x300/34495e/ffffff?text=Sách+1'"/>
+            <div class="portfolio-overlay">
+              <a href="product1.html" class="btn btn-sm btn-light-custom">Xem chi tiết</a>
+              <a href="#" class="btn btn-sm btn-cart" onclick="addToCart('Nhà Giả Kim')"><span class="glyphicon glyphicon-shopping-cart"></span> Mua ngay</a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <h5>Nhà Giả Kim</h5>
+            <p class="author">Paulo Coelho</p>
+            <p class="price">89.000 đ</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="portfolio-card">
+          <div class="portfolio-img">
+            <img src="images/book2.jpg" alt="Sách 2" class="img-responsive" onerror="this.src='https://via.placeholder.com/220x300/8e44ad/ffffff?text=Sách+2'"/>
+            <div class="portfolio-overlay">
+              <a href="product2.html" class="btn btn-sm btn-light-custom">Xem chi tiết</a>
+              <a href="#" class="btn btn-sm btn-cart" onclick="addToCart('Đắc Nhân Tâm')"><span class="glyphicon glyphicon-shopping-cart"></span> Mua ngay</a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <h5>Đắc Nhân Tâm</h5>
+            <p class="author">Dale Carnegie</p>
+            <p class="price">75.000 đ</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="portfolio-card">
+          <div class="portfolio-img">
+            <img src="images/book3.jpg" alt="Sách 3" class="img-responsive" onerror="this.src='https://via.placeholder.com/220x300/16a085/ffffff?text=Sách+3'"/>
+            <div class="portfolio-overlay">
+              <a href="product3.html" class="btn btn-sm btn-light-custom">Xem chi tiết</a>
+              <a href="#" class="btn btn-sm btn-cart" onclick="addToCart('Sapiens')"><span class="glyphicon glyphicon-shopping-cart"></span> Mua ngay</a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <h5>Sapiens: Lược sử loài người</h5>
+            <p class="author">Yuval Noah Harari</p>
+            <p class="price">120.000 đ</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="portfolio-card">
+          <div class="portfolio-img">
+            <img src="images/book4.jpg" alt="Sách 4" class="img-responsive" onerror="this.src='https://via.placeholder.com/220x300/c0392b/ffffff?text=Sách+4'"/>
+            <div class="portfolio-overlay">
+              <a href="product4.html" class="btn btn-sm btn-light-custom">Xem chi tiết</a>
+              <a href="#" class="btn btn-sm btn-cart" onclick="addToCart('Atomic Habits')"><span class="glyphicon glyphicon-shopping-cart"></span> Mua ngay</a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <h5>Atomic Habits</h5>
+            <p class="author">James Clear</p>
+            <p class="price">95.000 đ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hàng 2: Ý kiến khách hàng -->
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="testimonial-wrap">
+          <h3 class="text-center testimonial-title"><span class="glyphicon glyphicon-comment"></span> Khách hàng nói gì về chúng tôi</h3>
+          <div id="testimonialCarousel" class="carousel slide" data-ride="carousel" data-interval="4000">
+            <div class="carousel-inner">
+              <div class="item active">
+                <div class="testimonial-item">
+                  <p class="testimonial-text">"K'Bookstore là nơi tôi mua sách thường xuyên nhất. Sách đa dạng, giao hàng nhanh, đóng gói cẩn thận. Tôi đã giới thiệu cho tất cả bạn bè!"</p>
+                  <p class="testimonial-author">— <strong>Nguyễn Minh Anh</strong>, Hà Nội</p>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimonial-item">
+                  <p class="testimonial-text">"Tìm được nhiều cuốn sách hiếm mà các nơi khác không có. Giá cả hợp lý, dịch vụ chăm sóc khách hàng rất nhiệt tình. Sẽ tiếp tục ủng hộ!"</p>
+                  <p class="testimonial-author">— <strong>Trần Phúc Lộc</strong>, TP. Hồ Chí Minh</p>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimonial-item">
+                  <p class="testimonial-text">"Gói hội viên Gold thực sự xứng đáng. Mỗi tháng nhận được nhiều ưu đãi và sách tặng rất bất ngờ. K'Bookstore hiểu người đọc sách!"</p>
+                  <p class="testimonial-author">— <strong>Lê Thị Hương</strong>, Đà Nẵng</p>
+                </div>
+              </div>
+            </div>
+            <a class="left carousel-control testimonial-control" href="#testimonialCarousel" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control testimonial-control" href="#testimonialCarousel" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PRICING ========== -->
+<section id="pricing" class="section-pad bg-light">
+  <div class="container">
+    <div class="section-title text-center">
+      <h2>Gói thành viên</h2>
+      <div class="title-bar"></div>
+      <p class="section-sub">Chọn gói phù hợp và tận hưởng đặc quyền của hội viên K'Bookstore</p>
+    </div>
+    <div class="row">
+
+      <div class="col-md-4">
+        <div class="panel panel-default pricing-panel text-center">
+          <div class="panel-heading pricing-header silver" style="padding: 30px 15px;">
+            <i class="fa fa-shield fa-4x" style="color: #bdc3c7; margin-bottom: 15px;"></i>
+            <h3>Gói Bạc</h3>
+            <div class="price-tag" style="font-size: 24px; font-weight: bold;">99.000 đ<small>/tháng</small></div>
+          </div>
+          <div class="panel-body">
+            <ul class="pricing-list" style="list-style: none; padding: 0; text-align: left; margin-bottom: 20px;">
+              <li style="padding: 8px 0;"><i class="fa fa-check-circle text-success"></i> Giảm 10% toàn bộ sách</li>
+              <li style="padding: 8px 0;"><i class="fa fa-check-circle text-success"></i> Free ship đơn >200k</li>
+              <li style="padding: 8px 0;"><i class="fa fa-check-circle text-success"></i> E-book cơ bản</li>
+              <li style="padding: 8px 0; color: #ccc;"><i class="fa fa-times-circle"></i> Sách tặng hàng tháng</li>
+            </ul>
+            <button class="btn btn-pricing btn-block" data-toggle="modal" data-target="#registerModal" data-plan="Gói Bạc">Đăng ký ngay</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="panel panel-default pricing-panel text-center pricing-featured" style="border: 2px solid #f1c40f; transform: scale(1.05);">
+          <div class="panel-heading pricing-header gold" style="padding: 30px 15px; background-color: #fdfaf0;">
+            <i class="fa fa-trophy fa-4x" style="color: #f1c40f; margin-bottom: 15px;"></i>
+            <h3 style="color: #f1c40f;">Gói Vàng</h3>
+            <div class="price-tag" style="font-size: 28px; font-weight: bold;">199.000 đ<small>/tháng</small></div>
+            <span class="label label-warning">PHỔ BIẾN NHẤT</span>
+          </div>
+          <div class="panel-body">
+            <ul class="pricing-list" style="list-style: none; padding: 0; text-align: left; margin-bottom: 20px;">
+              <li style="padding: 8px 0;"><i class="fa fa-check-circle text-success"></i> Giảm 20% toàn bộ sách</li>
+              <li style="padding: 8px 0;"><i class="fa fa-check-circle text-success"></i> Free ship toàn quốc</li>
+              <li style="padding: 8px 0;"><i class="fa fa-check-circle text-success"></i> E-book đầy đủ</li>
+              <li style="padding: 8px 0;"><i class="fa fa-check-circle text-success"></i> 1 cuốn sách tặng/tháng</li>
+            </ul>
+            <button class="btn btn-pricing btn-pricing-featured btn-block" style="background-color: #f1c40f; color: white;" data-toggle="modal" data-target="#registerModal" data-plan="Gói Vàng">Đăng ký ngay</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="panel panel-default pricing-panel text-center">
+          <div class="panel-heading pricing-header diamond" style="padding: 30px 15px;">
+            <i class="fa fa-diamond fa-4x" style="color: #3498db; margin-bottom: 15px;"></i>
+            <h3>Gói Kim Cương</h3>
+            <div class="price-tag" style="font-size: 24px; font-weight: bold;">349.000 đ<small>/tháng</small></div>
+          </div>
+          <div class="panel-body">
+            <ul class="pricing-list" style="list-style: none; padding: 0; text-align: left; margin-bottom: 20px;">
+              <li style="padding: 8px 0;"><i class="fa fa-check-circle text-success"></i> Giảm 40% toàn bộ sách</li>
+              <li style="padding: 8px 0;"><i class="fa fa-check-circle text-success"></i> Free ship toàn quốc</li>
+              <li style="padding: 8px 0;"><i class="fa fa-check-circle text-success"></i> 3 cuốn sách tặng/tháng</li>
+              <li style="padding: 8px 0;"><i class="fa fa-check-circle text-success"></i> Ưu tiên sách mới nhất</li>
+            </ul>
+            <button class="btn btn-pricing btn-block" data-toggle="modal" data-target="#registerModal" data-plan="Gói Kim Cương">Đăng ký ngay</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== MODAL ĐĂNG KÝ GÓI ========== -->
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><span class="glyphicon glyphicon-user"></span> Đăng ký gói thành viên</h4>
+      </div>
+      <div class="modal-body">
+        <form id="modalForm">
+          <div class="form-group">
+            <label>Họ và tên <span class="text-danger">*</span></label>
+            <input type="text" id="m-name" class="form-control" placeholder="Nhập họ tên của bạn"/>
+            <span class="error-msg" id="err-m-name"></span>
+          </div>
+          <div class="form-group">
+            <label>Số điện thoại <span class="text-danger">*</span></label>
+            <input type="text" id="m-phone" class="form-control" placeholder="Nhập số điện thoại"/>
+            <span class="error-msg" id="err-m-phone"></span>
+          </div>
+          <div class="form-group">
+            <label>Email <span class="text-danger">*</span></label>
+            <input type="text" id="m-email" class="form-control" placeholder="Nhập địa chỉ email"/>
+            <span class="error-msg" id="err-m-email"></span>
+          </div>
+          <div class="form-group">
+            <label>Gói dịch vụ <span class="text-danger">*</span></label>
+            <div class="checkbox"><label><input type="checkbox" name="plan" value="Gói Bạc" id="chk-silver"/> Gói Bạc – 99.000đ/tháng</label></div>
+            <div class="checkbox"><label><input type="checkbox" name="plan" value="Gói Vàng" id="chk-gold"/> Gói Vàng – 199.000đ/tháng</label></div>
+            <div class="checkbox"><label><input type="checkbox" name="plan" value="Gói Kim Cương" id="chk-diamond"/> Gói Kim Cương – 349.000đ/tháng</label></div>
+            <span class="error-msg" id="err-m-plan"></span>
+          </div>
+          <div class="form-group">
+            <label>Yêu cầu khác</label>
+            <textarea id="m-note" class="form-control" rows="3" placeholder="Nhập yêu cầu hoặc ghi chú thêm..."></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Đóng</button>
+        <button type="button" class="btn btn-primary-custom" id="modalSubmit"><span class="glyphicon glyphicon-send"></span> Gửi đăng ký</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== CONTACT ========== -->
+<section id="contact" class="section-pad">
+  <div class="container">
+    <div class="section-title text-center">
+      <h2>Liên hệ</h2>
+      <div class="title-bar"></div>
+      <p class="section-sub">Chúng tôi luôn sẵn sàng lắng nghe bạn</p>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="contact-info">
+          <h4>Thông tin K'Bookstore</h4>
+          <ul class="contact-list" style="list-style: none; padding-left: 0;">
+            <li style="margin-bottom: 15px;"><i class="fa fa-map-marker" style="color: #c0392b; width: 25px;"></i> <strong>Địa chỉ:</strong> 123 Đường Sách, Quận 1, TP. Hồ Chí Minh</li>
+            <li style="margin-bottom: 15px;"><i class="fa fa-envelope" style="color: #c0392b; width: 25px;"></i> <strong>Email:</strong> contact@kbookstore.vn</li>
+            <li style="margin-bottom: 15px;"><i class="fa fa-phone-square" style="color: #c0392b; width: 25px;"></i> <strong>Điện thoại:</strong> 1800 1234 (miễn phí)</li>
+            <li style="margin-bottom: 15px;"><i class="fa fa-clock-o" style="color: #c0392b; width: 25px;"></i> <strong>Giờ làm việc:</strong> 8:00 – 22:00 mỗi ngày</li>
+            <li style="margin-bottom: 15px;"><i class="fa fa-building" style="color: #c0392b; width: 25px;"></i> <strong>Chi nhánh:</strong> Hà Nội, TP.HCM, Đà Nẵng, Cần Thơ</li>
+          </ul>
+          <div class="contact-social">
+            <a href="#" class="social-btn fb"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="social-btn gg"><i class="fa fa-google-plus"></i></a>
+            <a href="#" class="social-btn yt"><i class="fa fa-youtube-play"></i></a>
+            <a href="#" class="social-btn ig"><i class="fa fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="contact-form-wrap">
+          <h4>Gửi tin nhắn cho chúng tôi</h4>
+          <form id="contactForm" class="form-horizontal">
+            <div class="form-group">
+              <div class="col-sm-12">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                  <input type="text" id="c-name" class="form-control" placeholder="Họ và tên của bạn *"/>
+                </div>
+                <span class="error-msg" id="err-c-name"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                  <input type="text" id="c-email" class="form-control" placeholder="Email của bạn *"/>
+                </div>
+                <span class="error-msg" id="err-c-email"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+                  <textarea id="c-message" class="form-control" rows="4" placeholder="Nội dung tin nhắn (tối thiểu 20 ký tự)..."></textarea>
+                </div>
+                <span class="error-msg" id="err-c-message"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12 text-right">
+                <button type="button" id="contactSubmit" class="btn btn-primary-custom"><i class="fa fa-paper-plane"></i> Gửi tin nhắn</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row footer-top">
+      <div class="col-md-4">
+        <div class="footer-brand">
+          <span class="brand-k">K'</span><span class="brand-book">Bookstore</span>
+        </div>
+        <p>Nhà sách trực tuyến uy tín hàng đầu Việt Nam. Mang tri thức đến gần hơn với mọi người.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fa fa-facebook-square"></i></a>
+          <a href="#"><i class="fa fa-twitter-square"></i></a>
+          <a href="#"><i class="fa fa-youtube-square"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+      </div>
+     <div class="col-md-2 col-sm-4">
+        <h5>Thể loại</h5>
+        <ul class="footer-links">
+          <li><a href="service1.html"><i class="fa fa-angle-right"></i> Văn học</a></li>
+          <li><a href="service2.html"><i class="fa fa-angle-right"></i> Kinh tế</a></li>
+          <li><a href="service3.html"><i class="fa fa-angle-right"></i> Thiếu nhi</a></li>
+          <li><a href="service4.html"><i class="fa fa-angle-right"></i> Công nghệ</a></li>
+          <li><a href="service5.html"><i class="fa fa-angle-right"></i> Ngoại văn</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2 col-sm-4">
+        <h5>Hỗ trợ</h5>
+        <ul class="footer-links">
+          <li><a href="#"><i class="fa fa-angle-right"></i> Hướng dẫn mua</a></li>
+          <li><a href="#"><i class="fa fa-angle-right"></i> Chính sách đổi trả</a></li>
+          <li><a href="#"><i class="fa fa-angle-right"></i> Chính sách bảo mật</a></li>
+          <li><a href="#"><i class="fa fa-angle-right"></i> Câu hỏi thường gặp</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 col-sm-4">
+        <h5>Chi nhánh</h5>
+        <ul class="footer-links">
+          <li><span class="glyphicon glyphicon-map-marker"></span> 123 Đường Sách, Q.1, TP.HCM</li>
+          <li><span class="glyphicon glyphicon-map-marker"></span> 45 Phố Huế, Hoàn Kiếm, Hà Nội</li>
+          <li><span class="glyphicon glyphicon-map-marker"></span> 78 Lê Duẩn, Hải Châu, Đà Nẵng</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom text-center">
+      <p>&copy; 2024 K'Bookstore. Tất cả quyền được bảo lưu. | Thiết kế bởi K'Bookstore Team</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Giỏ hàng nổi -->
+<div id="cartWidget" class="cart-widget" style="display:none;">
+  <div class="cart-header">
+    <span class="glyphicon glyphicon-shopping-cart"></span> Giỏ hàng (<span id="cartCount">0</span>)
+    <button class="close-cart" onclick="toggleCart()">×</button>
+  </div>
+  <ul id="cartList" class="cart-list"></ul>
+  <div class="cart-footer">
+    <strong>Tổng: <span id="cartTotal">0</span> đ</strong>
+    <button class="btn btn-primary-custom btn-sm">Thanh toán</button>
+  </div>
+</div>
+<button id="cartToggleBtn" class="cart-float-btn" onclick="toggleCart()">
+  <span class="glyphicon glyphicon-shopping-cart"></span>
+  <span class="cart-badge" id="cartBadge">0</span>
+</button>
+
+<!-- Toast thông báo -->
+<div id="toast" class="toast-msg" style="display:none;"></div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
