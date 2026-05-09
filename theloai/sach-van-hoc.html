@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Văn học & Tiểu thuyết – K'Bookstore</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarMenu">
+        <span class="sr-only">Toggle</span>
+        <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><span class="brand-k">K'</span><span class="brand-book">Bookstore</span></a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarMenu">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a class="nav-link-custom" href="index.html#about"><i class="fa fa-info-circle" aria-hidden="true"></i> Giới thiệu</a></li>
+        <li><a class="nav-link-custom" href="index.html#services"><i class="fa fa-th-list" aria-hidden="true"></i> Thể loại</a></li>
+        <li><a class="nav-link-custom" href="index.html#portfolio"><i class="fa fa-star" aria-hidden="true"></i> Nổi bật</a></li>
+        <li><a class="nav-link-custom" href="index.html#pricing"><i class="fa fa-ticket" aria-hidden="true"></i> Gói thành viên</a></li>
+        <li><a class="nav-link-custom" href="index.html#contact"><i class="fa fa-paper-plane" aria-hidden="true"></i> Liên hệ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- BANNER -->
+<section id="banner">
+  <div class="carousel-slide" style="background:linear-gradient(135deg,#1a5276,#6c3483);height:260px;padding-top:50px;display:flex;align-items:center;justify-content:center;">
+    <div class="carousel-caption-custom">
+      <h1><span class="glyphicon glyphicon-book"></span> Văn học &amp; Tiểu thuyết</h1>
+      <p>Những tác phẩm kinh điển và đương đại hay nhất</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<section class="section-pad">
+  <div class="container">
+    <div class="row">
+      <!-- Main content -->
+      <div class="col-md-9">
+        <div class="section-title">
+          <h2>Sách Văn học nổi bật</h2>
+          <div class="title-bar" style="margin:0 0 30px;"></div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="portfolio-card">
+              <div class="portfolio-img">
+                <img src="images/book1.jpg" alt="Nhà Giả Kim" class="img-responsive" style="height:220px;object-fit:cover;" onerror="this.src='https://via.placeholder.com/220x220/2c3e50/fff?text=Nhà+Giả+Kim'"/>
+                <div class="portfolio-overlay">
+                  <a href="product1.html" class="btn btn-sm btn-light-custom">Xem chi tiết</a>
+                  <a href="#" class="btn btn-sm btn-cart" onclick="addToCart('Nhà Giả Kim')"><span class="glyphicon glyphicon-shopping-cart"></span> Mua ngay</a>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <h5>Nhà Giả Kim</h5>
+                <p class="author">Paulo Coelho</p>
+                <p class="price">89.000 đ</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="portfolio-card">
+              <div class="portfolio-img">
+                <img src="images/vanhoc2.jpg" alt="Tôi thấy hoa vàng" class="img-responsive" style="height:220px;object-fit:cover;" onerror="this.src='https://via.placeholder.com/220x220/8e44ad/fff?text=Hoa+Vàng'"/>
+                <div class="portfolio-overlay">
+                  <a href="#" class="btn btn-sm btn-light-custom">Xem chi tiết</a>
+                  <a href="#" class="btn btn-sm btn-cart" onclick="addToCart('Tôi thấy hoa vàng')"><span class="glyphicon glyphicon-shopping-cart"></span> Mua ngay</a>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <h5>Tôi thấy hoa vàng trên cỏ xanh</h5>
+                <p class="author">Nguyễn Nhật Ánh</p>
+                <p class="price">72.000 đ</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="portfolio-card">
+              <div class="portfolio-img">
+                <img src="images/vanhoc3.jpg" alt="Số đỏ" class="img-responsive" style="height:220px;object-fit:cover;" onerror="this.src='https://via.placeholder.com/220x220/c0392b/fff?text=Số+Đỏ'"/>
+                <div class="portfolio-overlay">
+                  <a href="#" class="btn btn-sm btn-light-custom">Xem chi tiết</a>
+                  <a href="#" class="btn btn-sm btn-cart" onclick="addToCart('Số đỏ')"><span class="glyphicon glyphicon-shopping-cart"></span> Mua ngay</a>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <h5>Số đỏ</h5>
+                <p class="author">Vũ Trọng Phụng</p>
+                <p class="price">55.000 đ</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="portfolio-card">
+              <div class="portfolio-img">
+                <img src="images/vanhoc4.jpg" alt="Mắt biếc" class="img-responsive" style="height:220px;object-fit:cover;" onerror="this.src='https://via.placeholder.com/220x220/16a085/fff?text=Mắt+Biếc'"/>
+                <div class="portfolio-overlay">
+                  <a href="#" class="btn btn-sm btn-light-custom">Xem chi tiết</a>
+                  <a href="#" class="btn btn-sm btn-cart" onclick="addToCart('Mắt biếc')"><span class="glyphicon glyphicon-shopping-cart"></span> Mua ngay</a>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <h5>Mắt biếc</h5>
+                <p class="author">Nguyễn Nhật Ánh</p>
+                <p class="price">68.000 đ</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="portfolio-card">
+              <div class="portfolio-img">
+                <img src="images/vanhoc5.jpg" alt="Chiến tranh và hòa bình" class="img-responsive" style="height:220px;object-fit:cover;" onerror="this.src='https://via.placeholder.com/220x220/784212/fff?text=Chiến+Tranh'"/>
+                <div class="portfolio-overlay">
+                  <a href="#" class="btn btn-sm btn-light-custom">Xem chi tiết</a>
+                  <a href="#" class="btn btn-sm btn-cart" onclick="addToCart('Chiến tranh và hòa bình')"><span class="glyphicon glyphicon-shopping-cart"></span> Mua ngay</a>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <h5>Chiến tranh và hòa bình</h5>
+                <p class="author">Leo Tolstoy</p>
+                <p class="price">150.000 đ</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="portfolio-card">
+              <div class="portfolio-img">
+                <img src="images/vanhoc6.jpg" alt="Harry Potter" class="img-responsive" style="height:220px;object-fit:cover;" onerror="this.src='https://via.placeholder.com/220x220/2980b9/fff?text=Harry+Potter'"/>
+                <div class="portfolio-overlay">
+                  <a href="#" class="btn btn-sm btn-light-custom">Xem chi tiết</a>
+                  <a href="#" class="btn btn-sm btn-cart" onclick="addToCart('Harry Potter')"><span class="glyphicon glyphicon-shopping-cart"></span> Mua ngay</a>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <h5>Harry Potter – Bộ 7 tập</h5>
+                <p class="author">J.K. Rowling</p>
+                <p class="price">490.000 đ</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar: Các thể loại -->
+      <div class="col-md-3">
+        <div style="background:#f8f5f0;border-radius:8px;padding:24px;margin-bottom:24px;">
+          <h4 style="color:#2c3e50;border-bottom:2px solid #e67e22;padding-bottom:10px;margin-bottom:16px;">Các thể loại khác</h4>
+          <ul style="list-style:none;padding:0;">
+            <li style="padding:8px 0;border-bottom:1px solid #e0d9d0;"><a href="./sach-kinh-te.html"><span class="glyphicon glyphicon-education"></span> Kinh tế &amp; Kinh doanh</a></li>
+            <li style="padding:8px 0;border-bottom:1px solid #e0d9d0;"><a href="./sach-thieu-nhi.html"><span class="glyphicon glyphicon-heart"></span> Sách Thiếu nhi</a></li>
+            <li style="padding:8px 0;border-bottom:1px solid #e0d9d0;"><a href="./sach-khoa-hoc-cong-nghe.html"><span class="glyphicon glyphicon-flash"></span> Khoa học &amp; Công nghệ</a></li>
+            <li style="padding:8px 0;border-bottom:1px solid #e0d9d0;"><a href="./sach-ngoai-van.html"><span class="glyphicon glyphicon-globe"></span> Sách Ngoại văn</a></li>
+            <li style="padding:8px 0;"><a href="./sach-tam-ly-ky-nang-song.html"><span class="glyphicon glyphicon-star"></span> Tâm lý &amp; Kỹ năng sống</a></li>
+          </ul>
+        </div>
+        <div style="background:#2c3e50;border-radius:8px;padding:24px;color:#fff;text-align:center;">
+          <span class="glyphicon glyphicon-gift" style="font-size:36px;color:#e67e22;"></span>
+          <h5 style="color:#fff;margin:12px 0 8px;">Ưu đãi hội viên</h5>
+          <p style="font-size:13px;opacity:.8;">Giảm đến 40% với gói Kim Cương!</p>
+          <a href="index.html#pricing" class="btn btn-primary-custom btn-sm" style="margin-top:8px;">Xem gói</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row footer-top">
+      <div class="col-md-6">
+        <span class="footer-brand"><span class="brand-k">K'</span><span class="brand-book">Bookstore</span></span>
+        <p>Nhà sách trực tuyến uy tín hàng đầu Việt Nam.</p>
+      </div>
+      <div class="col-md-6 text-right">
+        <ul class="footer-links" style="display:inline-block;text-align:left;">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="about.html">Giới thiệu</a></li>
+          <li><a href="index.html#contact">Liên hệ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom text-center">
+      <p>&copy; 2024 K'Bookstore. Tất cả quyền được bảo lưu.</p>
+    </div>
+  </div>
+</footer>
+
+<button id="cartToggleBtn" class="cart-float-btn" onclick="toggleCart()">
+  <span class="glyphicon glyphicon-shopping-cart"></span>
+  <span class="cart-badge" id="cartBadge">0</span>
+</button>
+<div id="cartWidget" class="cart-widget" style="display:none;">
+  <div class="cart-header"><span class="glyphicon glyphicon-shopping-cart"></span> Giỏ hàng (<span id="cartCount">0</span>)<button class="close-cart" onclick="toggleCart()">×</button></div>
+  <ul id="cartList" class="cart-list"></ul>
+  <div class="cart-footer"><strong>Tổng: <span id="cartTotal">0</span> đ</strong><button class="btn btn-primary-custom btn-sm">Thanh toán</button></div>
+</div>
+<div id="toast" class="toast-msg" style="display:none;"></div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

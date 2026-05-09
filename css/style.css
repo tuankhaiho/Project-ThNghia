@@ -1,6 +1,14 @@
 /* ===== K'BOOKSTORE – style.css ===== */
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/fonts/glyphicons-halflings-regular.eot');
+  src: url('https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+       url('https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/fonts/glyphicons-halflings-regular.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/fonts/glyphicons-halflings-regular.woff') format('woff'),
+       url('https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+       url('https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap');
-
 :root {
   --primary:   #2c3e50;
   --accent:    #e67e22;
