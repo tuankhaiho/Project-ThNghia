@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Giỏ hàng của bạn – K'Bookstore</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body style="background-color: #f8f9fa;">
+
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarMenu">
+        <span class="sr-only">Toggle</span>
+        <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><span class="brand-k">K'</span><span class="brand-book">Bookstore</span></a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarMenu">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a class="nav-link-custom" href="index.html#about"><i class="fa fa-info-circle"></i> Giới thiệu</a></li>
+        <li><a class="nav-link-custom" href="index.html#services"><i class="fa fa-th-list"></i> Thể loại</a></li>
+        <li><a class="nav-link-custom" href="index.html#portfolio"><i class="fa fa-star"></i> Nổi bật</a></li>
+        <li><a class="nav-link-custom" href="dang-nhap.html"><i class="fa fa-user"></i> Đăng nhập</a></li>
+        <li class="active">
+            <a class="nav-link-custom" href="gio-hang.html" style="font-weight: bold; color: #e67e22;">
+                <i class="fa fa-shopping-cart"></i> Giỏ hàng 
+                <span class="badge navCartCountBadge" style="background-color: #e67e22; color: #fff;">0</span>
+            </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div style="padding-top:100px;"></div>
+
+<div class="container" style="min-height: 50vh;">
+    <div class="row">
+        <div class="col-md-8">
+            <div style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                <h3 style="margin-top: 0; color: #2c3e50; border-bottom: 2px solid #e0d9d0; padding-bottom: 15px;">Giỏ hàng của bạn</h3>
+                <div class="table-responsive">
+                    <table class="table table-hover" style="margin-top: 20px;">
+                        <thead>
+                            <tr>
+                                <th>Sản phẩm</th>
+                                <th style="width: 120px;">Đơn giá</th>
+                                <th style="width: 100px;">Số lượng</th>
+                                <th style="width: 120px;">Thành tiền</th>
+                                <th style="width: 50px;"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="cartTableBody">
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                <h4 style="margin-top: 0; color: #2c3e50; border-bottom: 2px solid #e0d9d0; padding-bottom: 15px;">Tóm tắt đơn hàng</h4>
+                <div style="display: flex; justify-content: space-between; margin: 15px 0;">
+                    <span>Tạm tính:</span>
+                    <strong id="cartSubTotal">0 ₫</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin: 15px 0;">
+                    <span>Khuyến mãi:</span>
+                    <strong>0 ₫</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin: 15px 0; border-top: 1px solid #eee; padding-top: 15px;">
+                    <span style="font-size: 16px; font-weight: bold;">Tổng tiền:</span>
+                    <strong id="cartTotalPrice" style="font-size: 20px; color: #e67e22;">0 ₫</strong>
+                </div>
+                <button class="btn btn-primary-custom btn-lg btn-block" style="margin-top: 20px;">Tiến hành thanh toán</button>
+            </div>
+            <a href="index.html" class="btn btn-link btn-block" style="margin-top: 10px; color: #777;"><i class="fa fa-arrow-left"></i> Tiếp tục mua sắm</a>
+        </div>
+    </div>
+</div>
+
+<footer class="site-footer" style="margin-top: 60px;">
+  <div class="container">
+    <div class="footer-bottom text-center">
+      <p>&copy; 2024 K'Bookstore. Tất cả quyền được bảo lưu.</p>
+    </div>
+  </div>
+</footer>
+
+<div id="toast" class="toast-msg" style="display:none;"></div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

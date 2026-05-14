@@ -1,210 +1,147 @@
-/* ===== K'Bookstore – script.js ===== */
-$(document).ready(function () {
-
-  /* ──────────────────────────────────────────
-     1. SMOOTH SCROLL + ACTIVE NAV HIGHLIGHT
-  ────────────────────────────────────────── */
-  $('a.nav-link-custom[href^="#"]').on('click', function (e) {
-    e.preventDefault();
-    var target = $(this).attr('href');
-    if ($(target).length) {
-      $('html, body').animate({ scrollTop: $(target).offset().top - 66 }, 600, 'swing');
-      // close mobile menu
-      if ($('.navbar-collapse').hasClass('in')) {
-        $('.navbar-collapse').collapse('hide');
-      }
-    }
-  });
-
-  // Highlight active menu on scroll (scrollspy handled by Bootstrap data-spy,
-  // but we also manually add class for nav-link-custom)
-  $(window).on('scroll', function () {
-    var scrollPos = $(document).scrollTop() + 80;
-    $('section[id]').each(function () {
-      var sectionTop = $(this).offset().top;
-      var sectionBottom = sectionTop + $(this).outerHeight();
-      var id = $(this).attr('id');
-      if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
-        $('a.nav-link-custom').parent().removeClass('active');
-        $('a.nav-link-custom[href="#' + id + '"]').parent().addClass('active');
-      }
-    });
-  });
-
-  /* ──────────────────────────────────────────
-     2. CONTACT FORM VALIDATION
-  ────────────────────────────────────────── */
-  $('#contactSubmit').on('click', function () {
-    var valid = true;
-
-    // Clear errors
-    $('.error-msg').text('');
-    $('#contactForm .form-group').removeClass('has-error');
-
-    var name    = $.trim($('#c-name').val());
-    var email   = $.trim($('#c-email').val());
-    var message = $.trim($('#c-message').val());
-
-    // Name: không chứa ký tự số
-    if (!name) {
-      showError('err-c-name', 'c-name', 'Vui lòng nhập họ tên.');
-      valid = false;
-    } else if (/\d/.test(name)) {
-      showError('err-c-name', 'c-name', 'Họ tên không được chứa ký tự số.');
-      valid = false;
-    }
-
-    // Email: bắt buộc
-    if (!email) {
-      showError('err-c-email', 'c-email', 'Vui lòng nhập email.');
-      valid = false;
-    } else if (!isValidEmail(email)) {
-      showError('err-c-email', 'c-email', 'Email không hợp lệ.');
-      valid = false;
-    }
-
-    // Nội dung: tối thiểu 20 ký tự
-    if (!message) {
-      showError('err-c-message', 'c-message', 'Vui lòng nhập nội dung.');
-      valid = false;
-    } else if (message.length < 20) {
-      showError('err-c-message', 'c-message', 'Nội dung phải có ít nhất 20 ký tự (hiện tại: ' + message.length + ').');
-      valid = false;
-    }
-
-    if (valid) {
-      showToast('✓ Gửi tin nhắn thành công! Chúng tôi sẽ liên hệ sớm.');
-      $('#contactForm')[0].reset();
-    }
-  });
-
-  /* ──────────────────────────────────────────
-     3. PRICING MODAL: auto-check plan
-  ────────────────────────────────────────── */
-  $('[data-toggle="modal"][data-target="#registerModal"]').on('click', function () {
-    var plan = $(this).data('plan');
-    // Uncheck all first
-    $('input[name="plan"]').prop('checked', false);
-    // Check the matching one
-    $('input[name="plan"][value="' + plan + '"]').prop('checked', true);
-  });
-
-  /* ──────────────────────────────────────────
-     4. MODAL FORM VALIDATION
-  ────────────────────────────────────────── */
-  $('#modalSubmit').on('click', function () {
-    var valid = true;
-
-    // Clear errors
-    $('#err-m-name, #err-m-phone, #err-m-email, #err-m-plan').text('');
-    $('#modalForm .form-group').removeClass('has-error');
-
-    var name  = $.trim($('#m-name').val());
-    var phone = $.trim($('#m-phone').val());
-    var email = $.trim($('#m-email').val());
-    var plans = $('input[name="plan"]:checked');
-
-    if (!name) {
-      showModalError('err-m-name', 'm-name', 'Vui lòng nhập họ tên.');
-      valid = false;
-    }
-
-    if (!phone) {
-      showModalError('err-m-phone', 'm-phone', 'Vui lòng nhập số điện thoại.');
-      valid = false;
-    }
-
-    if (!email) {
-      showModalError('err-m-email', 'm-email', 'Vui lòng nhập email.');
-      valid = false;
-    } else if (!isValidEmail(email)) {
-      showModalError('err-m-email', 'm-email', 'Email không đúng định dạng.');
-      valid = false;
-    }
-
-    if (plans.length === 0) {
-      $('#err-m-plan').text('Vui lòng chọn ít nhất 1 gói dịch vụ.');
-      valid = false;
-    }
-
-    if (valid) {
-      $('#registerModal').modal('hide');
-      showToast('✓ Đăng ký thành công! Chúng tôi sẽ liên hệ bạn sớm nhất.');
-      $('#modalForm')[0].reset();
-    }
-  });
-
-  /* ──────────────────────────────────────────
-     5. HELPERS
-  ────────────────────────────────────────── */
-  function isValidEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  }
-
-  function showError(errId, fieldId, msg) {
-    $('#' + errId).text(msg);
-    $('#' + fieldId).closest('.form-group').addClass('has-error');
-  }
-
-  function showModalError(errId, fieldId, msg) {
-    $('#' + errId).text(msg);
-    $('#' + fieldId).closest('.form-group').addClass('has-error');
-  }
-
-}); // end document.ready
-
-/* ──────────────────────────────────────────
-   6. SHOPPING CART (global functions)
-────────────────────────────────────────── */
-var cart = [];
-var prices = {
-  'Nhà Giả Kim': 89000,
-  'Đắc Nhân Tâm': 75000,
-  'Sapiens': 120000,
-  'Atomic Habits': 95000
+const tempPriceMap = {
+    "Nhà Giả Kim": 89000,
+    "Tôi thấy hoa vàng trên cỏ xanh": 72000,
+    "Mắt biếc": 68000,
+    "Số đỏ": 55000,
+    "Chiến tranh và hòa bình": 150000,
+    "Dế Mèn phiêu lưu ký": 45000,
+    "Harry Potter": 1490000,
+    "The Great Gatsby": 120000,
+    "1984": 150000,
+    "Atomic Habits": 200000,
+    "Nhà đầu tư thông minh": 120000,
+    "Dạy con làm giàu": 95000,
+    "Từ tốt đến vĩ đại": 135000,
+    "7 thói quen hiệu quả": 110000,
+    "Khởi nghiệp tinh gọn": 130000,
+    "Đắc Nhân Tâm": 75000,
+    "Chú mèo đi hia": 30000,
+    "Truyện cổ Grim": 55000,
+    "Nghìn lẻ một đêm": 65000,
+    "Bộ sách tô màu": 40000,
+    "Le Petit Prince": 85000,
+    "Norwegian Wood": 110000,
+    "The Alchemist": 89000,
+    "Ikigai": 105000,
+    "Vũ trụ trong vỏ hạt dẻ": 125000,
+    "Trí tuệ nhân tạo": 150000,
+    "Khoa học dữ liệu": 130000,
+    "Blockchain": 110000,
+    "Lược sử loài người": 160000,
+    "Lược sử thời gian": 115000,
+    "Đàn ông sao Hỏa, đàn bà sao Kim": 78000,
+    "Đàn ông sao Hỏa...": 78000,
+    "Nghệ thuật sống": 55000,
+    "Không sinh không diệt đừng sợ hãi": 65000,
+    "Không sinh không diệt...": 65000,
+    "Khéo ăn khéo nói sẽ có được thiên hạ": 102000,
+    "Khéo ăn khéo nói...": 102000,
+    "Sức mạnh của thói quen": 95000,
+    "default": 100000 
 };
 
-function addToCart(title) {
-  var existing = cart.find(function (i) { return i.name === title; });
-  if (existing) {
-    existing.qty++;
-  } else {
-    cart.push({ name: title, qty: 1, price: prices[title] || 0 });
-  }
-  renderCart();
-  showToast('✓ Đã thêm "' + title + '" vào giỏ hàng!');
-  return false;
+let cart = JSON.parse(localStorage.getItem('kbook_cart')) || [];
+
+function updateNavCartCount() {
+    let count = cart.reduce((sum, item) => sum + item.quantity, 0);
+    $('.navCartCountBadge').text(count);
 }
 
-function renderCart() {
-  var total = 0;
-  var html = '';
-  cart.forEach(function (item) {
-    total += item.price * item.qty;
-    html += '<li><span>' + item.name + ' x' + item.qty + '</span><span>' + formatPrice(item.price * item.qty) + '</span></li>';
-  });
-  $('#cartList').html(html || '<li style="color:#999;text-align:center;padding:12px">Giỏ hàng trống</li>');
-  $('#cartTotal').text(formatPrice(total));
-  $('#cartCount').text(cart.length);
-  $('#cartBadge').text(cart.length);
+function addToCart(name) {
+    let price = tempPriceMap[name] || tempPriceMap["default"];
+    let existingItem = cart.find(item => item.name === name);
+    
+    if(existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        cart.push({name: name, price: price, quantity: 1});
+    }
+    
+    localStorage.setItem('kbook_cart', JSON.stringify(cart));
+    updateNavCartCount();
+
+    let toast = $('#toast');
+    if(toast.length) {
+        toast.text('Đã thêm "' + name + '" vào giỏ hàng!').fadeIn().delay(2000).fadeOut();
+    } else {
+        alert('Đã thêm "' + name + '" vào giỏ hàng!');
+    }
 }
 
-function toggleCart() {
-  var w = $('#cartWidget');
-  if (w.is(':visible')) {
-    w.hide();
-  } else {
-    renderCart();
-    w.show();
-  }
+function renderCartPage() {
+    if($('#cartTableBody').length === 0) return;
+
+    let tbody = $('#cartTableBody');
+    tbody.empty();
+    let total = 0;
+
+    if(cart.length === 0) {
+        tbody.append('<tr><td colspan="5" class="text-center" style="padding: 30px;">Giỏ hàng của bạn đang trống.</td></tr>');
+    } else {
+        cart.forEach((item, index) => {
+            let itemTotal = item.price * item.quantity;
+            total += itemTotal;
+            tbody.append(`
+                <tr>
+                    <td style="font-weight: 500; color: #2980b9;">${item.name}</td>
+                    <td>${item.price.toLocaleString('vi-VN')} ₫</td>
+                    <td>
+                        <input type="number" value="${item.quantity}" min="1" class="form-control input-sm" style="width:70px" onchange="updateQuantity(${index}, this.value)">
+                    </td>
+                    <td style="font-weight: bold;">${itemTotal.toLocaleString('vi-VN')} ₫</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm" onclick="removeFromCart(${index})" title="Xóa">
+                            <i class="fa fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+            `);
+        });
+    }
+    
+    $('#cartSubTotal').text(total.toLocaleString('vi-VN') + ' ₫');
+    $('#cartTotalPrice').text(total.toLocaleString('vi-VN') + ' ₫');
 }
 
-function formatPrice(n) {
-  return n.toLocaleString('vi-VN');
+function updateQuantity(index, val) {
+    let newQuantity = parseInt(val);
+    if(newQuantity >= 1) {
+        cart[index].quantity = newQuantity;
+        localStorage.setItem('kbook_cart', JSON.stringify(cart));
+        updateNavCartCount();
+        renderCartPage();
+    }
 }
 
-function showToast(msg) {
-  var t = $('#toast');
-  t.text(msg).show();
-  setTimeout(function () { t.hide(); }, 3000);
+function removeFromCart(index) {
+    cart.splice(index, 1);
+    localStorage.setItem('kbook_cart', JSON.stringify(cart));
+    updateNavCartCount();
+    renderCartPage();
 }
+
+$(document).ready(function() {
+    let path = window.location.pathname;
+    let baseUrl = "";
+    
+    if (path.includes("/chitiet/")) {
+        baseUrl = "../../";
+    } else if (path.includes("/theloai/")) {
+        baseUrl = "../";
+    }
+    
+    let navPlaceholder = $('#navbar-placeholder');
+    if (navPlaceholder.length) {
+        $.get(baseUrl + "navbar.html", function(data) {
+            let finalNavHtml = data.replace(/\{\{base_url\}\}/g, baseUrl);
+            navPlaceholder.html(finalNavHtml);
+            updateNavCartCount();
+        });
+    } else {
+        updateNavCartCount(); 
+    }
+
+    if(typeof renderCartPage === "function") {
+       renderCartPage(); 
+    }
+});

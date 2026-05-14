@@ -13,70 +13,7 @@
     </head>
     <body data-spy="scroll" data-target="#mainNav" data-offset="70">
         <!-- ========== NAVBAR ========== -->
-        <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button
-                        type="button"
-                        class="navbar-toggle collapsed"
-                        data-toggle="collapse"
-                        data-target="#navbarMenu"
-                    >
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html">
-                        <span class="brand-k">K'</span
-                        ><span class="brand-book">Bookstore</span>
-                    </a>
-                </div>
-                <div class="collapse navbar-collapse" id="navbarMenu">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a class="nav-link-custom" href="#about"
-                                ><i
-                                    class="fa fa-info-circle"
-                                    aria-hidden="true"
-                                ></i>
-                                Giới thiệu</a
-                            >
-                        </li>
-                        <li>
-                            <a class="nav-link-custom" href="#services"
-                                ><i
-                                    class="fa fa-th-list"
-                                    aria-hidden="true"
-                                ></i>
-                                Thể loại</a
-                            >
-                        </li>
-                        <li>
-                            <a class="nav-link-custom" href="#portfolio"
-                                ><i class="fa fa-star" aria-hidden="true"></i>
-                                Nổi bật</a
-                            >
-                        </li>
-                        <li>
-                            <a class="nav-link-custom" href="#pricing"
-                                ><i class="fa fa-ticket" aria-hidden="true"></i>
-                                Gói thành viên</a
-                            >
-                        </li>
-                        <li>
-                            <a class="nav-link-custom" href="#contact"
-                                ><i
-                                    class="fa fa-paper-plane"
-                                    aria-hidden="true"
-                                ></i>
-                                Liên hệ</a
-                            >
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <div id="navbar-placeholder"></div>
 
         <!-- ========== BANNER / CAROUSEL ========== -->
         <section id="banner">
@@ -401,14 +338,10 @@
                                     src="./images/nha-gia-kim.jpg"
                                     alt="Sách 1"
                                     class="img-responsive"
-                                    onerror="
-                                        this.src =
-                                            'https://via.placeholder.com/220x300/34495e/ffffff?text=Sách+1'
-                                    "
                                 />
                                 <div class="portfolio-overlay">
                                     <a
-                                        href="product1.html"
+                                        href="./chitiet/vanhoc/nha-gia-kim.html"
                                         class="btn btn-sm btn-light-custom"
                                         >Xem chi tiết</a
                                     >
@@ -441,7 +374,7 @@
                                 />
                                 <div class="portfolio-overlay">
                                     <a
-                                        href="product2.html"
+                                        href="./chitiet/kinhte/dac-nhan-tam.html"
                                         class="btn btn-sm btn-light-custom"
                                         >Xem chi tiết</a
                                     >
@@ -474,7 +407,7 @@
                                 />
                                 <div class="portfolio-overlay">
                                     <a
-                                        href="product3.html"
+                                        href="./chitiet/khoahoc/luoc-su-loai-nguoi.html"
                                         class="btn btn-sm btn-light-custom"
                                         >Xem chi tiết</a
                                     >
@@ -1255,29 +1188,7 @@
             </div>
         </footer>
 
-        <!-- Giỏ hàng nổi -->
-        <div id="cartWidget" class="cart-widget" style="display: none">
-            <div class="cart-header">
-                <span class="glyphicon glyphicon-shopping-cart"></span> Giỏ hàng
-                (<span id="cartCount">0</span>)
-                <button class="close-cart" onclick="toggleCart()">×</button>
-            </div>
-            <ul id="cartList" class="cart-list"></ul>
-            <div class="cart-footer">
-                <strong>Tổng: <span id="cartTotal">0</span> đ</strong>
-                <button class="btn btn-primary-custom btn-sm">
-                    Thanh toán
-                </button>
-            </div>
-        </div>
-        <button
-            id="cartToggleBtn"
-            class="cart-float-btn"
-            onclick="toggleCart()"
-        >
-            <span class="glyphicon glyphicon-shopping-cart"></span>
-            <span class="cart-badge" id="cartBadge">0</span>
-        </button>
+        
 
         <!-- Toast thông báo -->
         <div id="toast" class="toast-msg" style="display: none"></div>

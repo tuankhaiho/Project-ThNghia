@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bài Thực Hành – K'Bookstore</title>
+  
+  <link rel="stylesheet" href="css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  
+  <style>
+    /* CSS cho Sidebar Danh mục Lab */
+    .sidebar-lab {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        margin-bottom: 30px;
+        border: 1px solid #e0d9d0;
+    }
+    .sidebar-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 20px;
+        font-weight: 700;
+        color: #2c3e50;
+        border-bottom: 2px solid #e67e22;
+        padding-bottom: 12px;
+        margin-bottom: 15px;
+        margin-top: 0;
+    }
+    .lab-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .lab-list li {
+        margin-bottom: 8px;
+    }
+    .lab-list a {
+        display: block;
+        padding: 10px 15px;
+        color: #3d3d3d;
+        border-radius: 4px;
+        transition: all 0.3s;
+        font-weight: 600;
+        font-size: 14px;
+    }
+    .lab-list a i {
+        margin-right: 8px;
+        color: #e67e22;
+    }
+    .lab-list a:hover, .lab-list a.active {
+        background-color: #f8f5f0;
+        color: #e67e22;
+        text-decoration: none;
+    }
+
+    /* CSS cho Card Bài thực hành */
+    .lab-card {
+        background: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        margin-bottom: 30px;
+        transition: transform 0.3s, box-shadow 0.3s;
+        border: 1px solid #e0d9d0;
+    }
+    .lab-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    .lab-img {
+        height: 160px;
+        background: linear-gradient(135deg, #2c3e50, #34495e);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 50px;
+        color: #fff;
+    }
+    .lab-info {
+        padding: 20px;
+        text-align: center;
+    }
+    .lab-info h4 {
+        color: #2c3e50;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 12px;
+        font-size: 18px;
+    }
+    .lab-info p {
+        color: #777;
+        font-size: 14px;
+        margin-bottom: 20px;
+        min-height: 42px;
+        line-height: 1.5;
+    }
+    .page-header-title {
+        margin-top: 0;
+        color: #2c3e50;
+        font-weight: 700;
+        margin-bottom: 30px;
+        font-family: 'Playfair Display', serif;
+    }
+  </style>
+</head>
+<body style="background-color: #f8f9fa;">
+
+<div id="navbar-placeholder"></div>
+<div style="padding-top:70px;"></div>
+
+<div style="background:#f8f5f0;padding:12px 0;border-bottom:1px solid #e0d9d0; margin-bottom: 40px;">
+  <div class="container">
+    <ol class="breadcrumb" style="background:none;padding:0;margin:0;font-size:13px;">
+      <li><a href="index.html">Trang chủ</a></li>
+      <li class="active">Bài thực hành</li>
+    </ol>
+  </div>
+</div>
+
+<div class="container" style="min-height: 60vh;">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="sidebar-lab">
+                <h3 class="sidebar-title">Danh mục Lab</h3>
+                <ul class="lab-list">
+                    <li><a href="#" class="active"><i class="fa fa-folder-open"></i> Tất cả các bài</a></li>
+                    <li><a href="#"><i class="fa fa-file-code-o"></i> Lab 1: Trang chủ</a></li>
+                    <li><a href="#"><i class="fa fa-file-code-o"></i> Lab 2: Danh mục</a></li>
+                    <li><a href="#"><i class="fa fa-file-code-o"></i> Lab 3: Chi tiết SP</a></li>
+                    <li><a href="#"><i class="fa fa-file-code-o"></i> Lab 4: Giỏ hàng</a></li>
+                    <li><a href="#"><i class="fa fa-star" style="color: #c0392b;"></i> Bài tập lớn</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-9">
+            <h2 class="page-header-title">Danh Sách Bài Thực Hành (Labs)</h2>
+            <div class="row">
+                
+                <div class="col-md-4 col-sm-6">
+                    <div class="lab-card">
+                        <div class="lab-img">
+                            <i class="fa fa-home"></i>
+                        </div>
+                        <div class="lab-info">
+                            <h4>Lab 1: Trang chủ</h4>
+                            <p>Thiết kế giao diện Home Page sử dụng Bootstrap, HTML/CSS.</p>
+                            <a href="index.html" class="btn btn-outline-custom btn-block" target="_blank">Xem bài làm</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="lab-card">
+                        <div class="lab-img" style="background: linear-gradient(135deg, #16a085, #1abc9c);">
+                            <i class="fa fa-th-large"></i>
+                        </div>
+                        <div class="lab-info">
+                            <h4>Lab 2: Trang danh mục</h4>
+                            <p>Hiển thị danh sách sản phẩm theo dạng Grid, tích hợp Sidebar.</p>
+                            <a href="theloai/sach-van-hoc.html" class="btn btn-outline-custom btn-block" target="_blank">Xem bài làm</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="lab-card">
+                        <div class="lab-img" style="background: linear-gradient(135deg, #2980b9, #3498db);">
+                            <i class="fa fa-book"></i>
+                        </div>
+                        <div class="lab-info">
+                            <h4>Lab 3: Chi tiết sản phẩm</h4>
+                            <p>Hiển thị chi tiết thông tin sách, giá, mô tả và sách liên quan.</p>
+                            <a href="chitiet/vanhoc/toi-thay-hoa-vang-tren-co-xanh.html" class="btn btn-outline-custom btn-block" target="_blank">Xem bài làm</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="lab-card">
+                        <div class="lab-img" style="background: linear-gradient(135deg, #e67e22, #f39c12);">
+                            <i class="fa fa-shopping-cart"></i>
+                        </div>
+                        <div class="lab-info">
+                            <h4>Lab 4: Giỏ hàng</h4>
+                            <p>Sử dụng LocalStorage để lưu giỏ hàng, xây dựng form đăng nhập.</p>
+                            <a href="gio-hang.html" class="btn btn-outline-custom btn-block" target="_blank">Xem bài làm</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="lab-card" style="border-color: #c0392b;">
+                        <div class="lab-img" style="background: linear-gradient(135deg, #c0392b, #e74c3c);">
+                            <i class="fa fa-trophy"></i>
+                        </div>
+                        <div class="lab-info">
+                            <h4 style="color: #c0392b;">Bài tập lớn</h4>
+                            <p>Hoàn thiện toàn bộ cấu trúc K'Bookstore, tối ưu UI/UX.</p>
+                            <a href="index.html" class="btn btn-primary-custom btn-block" style="background-color: #c0392b; border: none;" target="_blank">Demo Đồ án</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row footer-top">
+      <div class="col-md-6">
+        <span class="footer-brand"><span class="brand-k">K'</span><span class="brand-book">Bookstore</span></span>
+        <p>Nhà sách trực tuyến uy tín hàng đầu Việt Nam.</p>
+      </div>
+      <div class="col-md-6 text-right">
+        <ul class="footer-links" style="display:inline-block; text-align:left; list-style:none; padding:0;">
+          <li><a href="index.html"><i class="fa fa-home" style="width: 20px;"></i> Trang chủ</a></li>
+          <li><a href="about.html"><i class="fa fa-info-circle" style="width: 20px;"></i> Giới thiệu</a></li>
+          <li><a href="index.html#contact"><i class="fa fa-envelope" style="width: 20px;"></i> Liên hệ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom text-center">
+      <p>&copy; 2024 K'Bookstore. Tất cả quyền được bảo lưu.</p>
+    </div>
+  </div>
+</footer>
+
+<div id="toast" class="toast-msg" style="display:none;"></div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

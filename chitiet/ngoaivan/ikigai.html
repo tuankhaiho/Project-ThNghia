@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ikigai – K'Bookstore</title>
+  <link rel="stylesheet" href="../../css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+
+<div id="navbar-placeholder"></div>
+
+<div style="padding-top:70px;"></div>
+
+<div style="background:#f8f5f0;padding:12px 0;border-bottom:1px solid #e0d9d0;">
+  <div class="container">
+    <ol class="breadcrumb" style="background:none;padding:0;margin:0;font-size:13px;">
+      <li><a href="../../index.html">Trang chủ</a></li>
+      <li><a href="../../theloai/sach-ngoai-van.html">Sách Ngoại văn</a></li>
+      <li class="active">Ikigai</li>
+    </ol>
+  </div>
+</div>
+
+<section class="section-pad">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <img src="../../images/ikigai.jpg" alt="Ikigai" class="img-responsive img-rounded" style="max-width:280px;margin:0 auto;box-shadow:0 8px 24px rgba(0,0,0,.15);"/>
+        <div style="margin-top:20px;">
+          <button class="btn btn-primary-custom btn-lg btn-block" onclick="addToCart('Ikigai')">
+            <span class="glyphicon glyphicon-shopping-cart"></span> Thêm vào giỏ hàng
+          </button>
+          <button class="btn btn-outline-custom btn-lg btn-block" style="margin-top:10px;">
+            <span class="glyphicon glyphicon-heart"></span> Yêu thích
+          </button>
+        </div>
+      </div>
+
+      <div class="col-md-8">
+        <h2 style="font-size:32px;color:#2c3e50;margin-bottom:6px;">Ikigai: The Japanese Secret to a Long and Happy Life</h2>
+        <p style="color:#777;font-size:15px;margin-bottom:16px;">Tác giả: <strong style="color:#e67e22;">Héctor García & Francesc Miralles</strong></p>
+
+        <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px;flex-wrap:wrap;">
+          <span style="font-size:32px;font-weight:700;color:#e67e22;font-family:'Playfair Display',serif;">105.000 ₫</span>
+          <span style="font-size:16px;color:#aaa;text-decoration:line-through;">140.000 ₫</span>
+          <span style="background:#e67e22;color:#fff;padding:4px 10px;border-radius:12px;font-size:12px;font-weight:700;">–25%</span>
+        </div>
+
+        <div style="display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap;">
+          <span style="background:#eaf0fb;color:#2980b9;padding:4px 12px;border-radius:12px;font-size:12px;">Ngoại văn</span>
+          <span style="background:#eaf0fb;color:#2980b9;padding:4px 12px;border-radius:12px;font-size:12px;">Self-help</span>
+          <span style="background:#eaf0fb;color:#2980b9;padding:4px 12px;border-radius:12px;font-size:12px;">Lifestyle</span>
+        </div>
+
+        <table class="table table-bordered" style="font-size:14px;max-width:420px;">
+          <tr><td style="background:#f8f5f0;font-weight:600;width:40%;">Nhà xuất bản</td><td>Penguin Books</td></tr>
+          <tr><td style="background:#f8f5f0;font-weight:600;">Số trang</td><td>208 trang</td></tr>
+          <tr><td style="background:#f8f5f0;font-weight:600;">Ngôn ngữ</td><td>Tiếng Anh</td></tr>
+          <tr><td style="background:#f8f5f0;font-weight:600;">Năm xuất bản</td><td>2017</td></tr>
+          <tr><td style="background:#f8f5f0;font-weight:600;">Dạng bìa</td><td>Bìa cứng</td></tr>
+        </table>
+
+        <div style="background:#f8f5f0;border-left:4px solid #e67e22;padding:16px 20px;border-radius:0 6px 6px 0;margin-bottom:20px;">
+          <h5 style="color:#2c3e50;margin-top:0;">Mô tả sách</h5>
+          <p style="font-size:14px;line-height:1.8;color:#555;margin:0;">
+            The people of Japan believe that everyone has an ikigai - a reason to jump out of bed each morning. Inspiring and comforting, this book will give you the life-changing tools to uncover your personal ikigai. It will show you how to leave urgency behind, find your purpose, nurture friendships, and throw yourself into your passions.
+          </p>
+        </div>
+
+        <div style="background:#fffbf3;border:1px solid #f39c12;border-radius:6px;padding:14px 18px;">
+          <span class="glyphicon glyphicon-ok-circle" style="color:#f39c12;"></span>
+          <strong style="color:#f39c12;"> Cam kết của K'Bookstore:</strong>
+          <span style="font-size:13px;color:#777;"> Sách chính hãng · Giao hàng toàn quốc · Đổi trả miễn phí trong 7 ngày.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-title" style="margin-top:60px;">
+      <h3 style="color:#2c3e50;">Sách liên quan</h3>
+      <div class="title-bar" style="margin:8px 0 30px;"></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3"><div class="portfolio-card">
+        <div class="portfolio-img"><img src="../../images/1984.jpg" class="img-responsive" style="height:180px;object-fit:cover;"/>
+        <div class="portfolio-overlay"><a href="1984.html" class="btn btn-sm btn-light-custom">Xem</a><a href="#" class="btn btn-sm btn-cart" onclick="addToCart('1984')"><span class="glyphicon glyphicon-shopping-cart"></span></a></div></div>
+        <div class="portfolio-info"><h5>1984</h5><p class="price">150.000 ₫</p></div>
+      </div></div>
+      <div class="col-sm-3"><div class="portfolio-card">
+        <div class="portfolio-img"><img src="../../images/norwegian.jpg" class="img-responsive" style="height:180px;object-fit:cover;"/>
+        <div class="portfolio-overlay"><a href="norwegian-wood.html" class="btn btn-sm btn-light-custom">Xem</a><a href="#" class="btn btn-sm btn-cart" onclick="addToCart('Norwegian Wood')"><span class="glyphicon glyphicon-shopping-cart"></span></a></div></div>
+        <div class="portfolio-info"><h5>Norwegian Wood</h5><p class="price">110.000 ₫</p></div>
+      </div></div>
+      <div class="col-sm-3"><div class="portfolio-card">
+        <div class="portfolio-img"><img src="../../images/prince.jpg" class="img-responsive" style="height:180px;object-fit:cover;"/>
+        <div class="portfolio-overlay"><a href="le-petit-prince.html" class="btn btn-sm btn-light-custom">Xem</a><a href="#" class="btn btn-sm btn-cart" onclick="addToCart('Le Petit Prince')"><span class="glyphicon glyphicon-shopping-cart"></span></a></div></div>
+        <div class="portfolio-info"><h5>Le Petit Prince</h5><p class="price">85.000 ₫</p></div>
+      </div></div>
+      <div class="col-sm-3"><div class="portfolio-card">
+        <div class="portfolio-img"><img src="../../images/alchemist.jpg" class="img-responsive" style="height:180px;object-fit:cover;"/>
+        <div class="portfolio-overlay"><a href="the-alchemist.html" class="btn btn-sm btn-light-custom">Xem</a><a href="#" class="btn btn-sm btn-cart" onclick="addToCart('The Alchemist')"><span class="glyphicon glyphicon-shopping-cart"></span></a></div></div>
+        <div class="portfolio-info"><h5>The Alchemist</h5><p class="price">89.000 ₫</p></div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row footer-top">
+      <div class="col-md-6">
+        <span class="footer-brand"><span class="brand-k">K'</span><span class="brand-book">Bookstore</span></span>
+        <p>Nhà sách trực tuyến uy tín hàng đầu Việt Nam.</p>
+      </div>
+      <div class="col-md-6 text-right">
+        <ul class="footer-links" style="display:inline-block; text-align:left; list-style:none; padding:0;">
+          <li style="margin-bottom: 8px;"><a href="../../index.html"><i class="fa fa-home" style="width: 20px;"></i> Trang chủ</a></li>
+          <li style="margin-bottom: 8px;"><a href="../../theloai/sach-ngoai-van.html"><i class="fa fa-globe" style="width: 20px;"></i> Sách Ngoại văn</a></li>
+          <li><a href="../../index.html#contact"><i class="fa fa-envelope" style="width: 20px;"></i> Liên hệ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom text-center">
+      <p>&copy; 2024 K'Bookstore. Tất cả quyền được bảo lưu.</p>
+    </div>
+  </div>
+</footer>
+
+<button id="cartToggleBtn" class="cart-float-btn" onclick="toggleCart()">
+  <span class="glyphicon glyphicon-shopping-cart"></span>
+  <span class="cart-badge" id="cartBadge">0</span>
+</button>
+
+<div id="cartWidget" class="cart-widget" style="display:none;">
+  <div class="cart-header">
+    <span class="glyphicon glyphicon-shopping-cart"></span> Giỏ hàng (<span id="cartCount">0</span>)
+    <button class="close-cart" onclick="toggleCart()">×</button>
+  </div>
+  <ul id="cartList" class="cart-list"></ul>
+  <div class="cart-footer">
+    <strong>Tổng: <span id="cartTotal">0</span> ₫</strong>
+    <button class="btn btn-primary-custom btn-sm">Thanh toán</button>
+  </div>
+</div>
+
+<div id="toast" class="toast-msg" style="display:none;"></div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/script.js"></script>
+</body>
+</html>

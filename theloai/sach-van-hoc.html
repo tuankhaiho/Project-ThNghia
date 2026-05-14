@@ -10,26 +10,7 @@
 </head>
 <body>
 
-<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarMenu">
-        <span class="sr-only">Toggle</span>
-        <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="../index.html"><span class="brand-k">K'</span><span class="brand-book">Bookstore</span></a>
-    </div>
-    <div class="collapse navbar-collapse" id="navbarMenu">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a class="nav-link-custom" href="../index.html#about"><i class="fa fa-info-circle"></i> Giới thiệu</a></li>
-        <li><a class="nav-link-custom" href="../index.html#services"><i class="fa fa-th-list"></i> Thể loại</a></li>
-        <li><a class="nav-link-custom" href="../index.html#portfolio"><i class="fa fa-star"></i> Nổi bật</a></li>
-        <li><a class="nav-link-custom" href="../index.html#pricing"><i class="fa fa-ticket"></i> Gói thành viên</a></li>
-        <li><a class="nav-link-custom" href="../index.html#contact"><i class="fa fa-paper-plane"></i> Liên hệ</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<div id="navbar-placeholder"></div>
 
 <section id="banner">
   <div class="carousel-slide" style="background:linear-gradient(135deg,#1a5276,#6c3483);height:260px;padding-top:50px;display:flex;align-items:center;justify-content:center;">
@@ -198,15 +179,7 @@
   </div>
 </footer>
 
-<button id="cartToggleBtn" class="cart-float-btn" onclick="toggleCart()">
-  <span class="glyphicon glyphicon-shopping-cart"></span>
-  <span class="cart-badge" id="cartBadge">0</span>
-</button>
-<div id="cartWidget" class="cart-widget" style="display:none;">
-  <div class="cart-header"><span class="glyphicon glyphicon-shopping-cart"></span> Giỏ hàng (<span id="cartCount">0</span>)<button class="close-cart" onclick="toggleCart()">×</button></div>
-  <ul id="cartList" class="cart-list"></ul>
-  <div class="cart-footer"><strong>Tổng: <span id="cartTotal">0</span> ₫</strong><button class="btn btn-primary-custom btn-sm">Thanh toán</button></div>
-</div>
+
 <div id="toast" class="toast-msg" style="display:none;"></div>
 
 <script src="../js/jquery.min.js"></script>

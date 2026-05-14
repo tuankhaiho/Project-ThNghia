@@ -12,77 +12,14 @@
         <link rel="stylesheet" href="../css/style.css" />
     </head>
     <body>
-        <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button
-                        type="button"
-                        class="navbar-toggle collapsed"
-                        data-toggle="collapse"
-                        data-target="#navbarMenu"
-                    >
-                        <span class="sr-only">Toggle</span
-                        ><span class="icon-bar"></span
-                        ><span class="icon-bar"></span
-                        ><span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="../index.html"
-                        ><span class="brand-k">K'</span
-                        ><span class="brand-book">Bookstore</span></a
-                    >
-                </div>
-                <div class="collapse navbar-collapse" id="navbarMenu">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a
-                                class="nav-link-custom"
-                                href="../index.html#about"
-                                ><i class="fa fa-info-circle"></i> Giới thiệu</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                class="nav-link-custom"
-                                href="../index.html#services"
-                                ><i class="fa fa-th-list"></i> Thể loại</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                class="nav-link-custom"
-                                href="../index.html#portfolio"
-                                ><i class="fa fa-star"></i> Nổi bật</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                class="nav-link-custom"
-                                href="../index.html#pricing"
-                                ><i class="fa fa-ticket"></i> Gói thành viên</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                class="nav-link-custom"
-                                href="../index.html#contact"
-                                ><i class="fa fa-paper-plane"></i> Liên hệ</a
-                            >
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        
+        <div id="navbar-placeholder"></div>
 
         <section id="banner">
             <div
                 class="carousel-slide"
                 style="
-                    background: linear-gradient(
-                        135deg,
-                        #0f2027,
-                        #203a43,
-                        #2c5364
-                    );
+                    background: linear-gradient(135deg, #2b5876, #4e4376);
                     height: 260px;
                     padding-top: 50px;
                     display: flex;
@@ -95,7 +32,7 @@
                         <span class="glyphicon glyphicon-flash"></span> Khoa học
                         &amp; Công nghệ
                     </h1>
-                    <p>Khám phá những tiến bộ mới nhất</p>
+                    <p>Khám phá tri thức vũ trụ, tương lai và vạn vật</p>
                 </div>
             </div>
         </section>
@@ -105,7 +42,7 @@
                 <div class="row">
                     <div class="col-md-9">
                         <div class="section-title">
-                            <h2>Sách Khoa học nổi bật</h2>
+                            <h2>Sách Khoa học & Công nghệ nổi bật</h2>
                             <div
                                 class="title-bar"
                                 style="margin: 0 0 30px"
@@ -117,18 +54,20 @@
                                     <div class="portfolio-img">
                                         <img
                                             src="../images/luoc-su-thoi-gian.jpg"
-                                            alt="Vũ trụ"
+                                            alt="Lược sử thời gian"
                                         />
                                         <div class="portfolio-overlay">
                                             <a
-                                                href="#"
+                                                href="../chitiet/khoahoc/luoc-su-thoi-gian.html"
                                                 class="btn btn-sm btn-light-custom"
-                                                >Xem</a
+                                                >Xem chi tiết</a
                                             ><a
                                                 href="#"
                                                 class="btn btn-sm btn-cart"
                                                 onclick="
-                                                    addToCart('Lược sử thời gian')
+                                                    addToCart(
+                                                        'Lược sử thời gian',
+                                                    )
                                                 "
                                                 ><span
                                                     class="glyphicon glyphicon-shopping-cart"
@@ -140,141 +79,11 @@
                                     <div class="portfolio-info">
                                         <h5>Lược sử thời gian</h5>
                                         <p class="author">Stephen Hawking</p>
-                                        <p class="price">150.000 ₫</p>
+                                        <p class="price">115.000 ₫</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-4">
-                                <div class="portfolio-card">
-                                    <div class="portfolio-img">
-                                        <img
-                                            src="../images/tri-tue-nhan-tao.jpg"
-                                            alt="AI"
-                                        />
-                                        <div class="portfolio-overlay">
-                                            <a
-                                                href="#"
-                                                class="btn btn-sm btn-light-custom"
-                                                >Xem</a
-                                            ><a
-                                                href="#"
-                                                class="btn btn-sm btn-cart"
-                                                onclick="
-                                                    addToCart(
-                                                        'Trí tuệ nhân tạo',
-                                                    )
-                                                "
-                                                ><span
-                                                    class="glyphicon glyphicon-shopping-cart"
-                                                ></span>
-                                                Mua</a
-                                            >
-                                        </div>
-                                    </div>
-                                    <div class="portfolio-info">
-                                        <h5>Trí tuệ nhân tạo</h5>
-                                        <p class="author">Stuart Russell</p>
-                                        <p class="price">180.000 ₫</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="portfolio-card">
-                                    <div class="portfolio-img">
-                                        <img
-                                            src="../images/luoc-su-loai-nguoi.jpg"
-                                            alt="Sapiens"
-                                        />
-                                        <div class="portfolio-overlay">
-                                            <a
-                                                href="#"
-                                                class="btn btn-sm btn-light-custom"
-                                                >Xem</a
-                                            ><a
-                                                href="#"
-                                                class="btn btn-sm btn-cart"
-                                                onclick="addToCart('Sapiens')"
-                                                ><span
-                                                    class="glyphicon glyphicon-shopping-cart"
-                                                ></span>
-                                                Mua</a
-                                            >
-                                        </div>
-                                    </div>
-                                    <div class="portfolio-info">
-                                        <h5>Sapiens</h5>
-                                        <p class="author">Yuval Noah Harari</p>
-                                        <p class="price">120.000 ₫</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="portfolio-card">
-                                    <div class="portfolio-img">
-                                        <img
-                                            src="../images/khoa-hoc-du-lieu.jpg"
-                                            alt="Data Science"
-                                        />
-                                        <div class="portfolio-overlay">
-                                            <a
-                                                href="#"
-                                                class="btn btn-sm btn-light-custom"
-                                                >Xem</a
-                                            ><a
-                                                href="#"
-                                                class="btn btn-sm btn-cart"
-                                                onclick="
-                                                    addToCart(
-                                                        'Khoa học dữ liệu',
-                                                    )
-                                                "
-                                                ><span
-                                                    class="glyphicon glyphicon-shopping-cart"
-                                                ></span>
-                                                Mua</a
-                                            >
-                                        </div>
-                                    </div>
-                                    <div class="portfolio-info">
-                                        <h5>Khoa học dữ liệu</h5>
-                                        <p class="author">John D. Kelleher</p>
-                                        <p class="price">140.000 ₫</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="portfolio-card">
-                                    <div class="portfolio-img">
-                                        <img
-                                            src="../images/block-chain.jpg"
-                                            alt="Blockchain"
-
-                                        />
-                                        <div class="portfolio-overlay">
-                                            <a
-                                                href="#"
-                                                class="btn btn-sm btn-light-custom"
-                                                >Xem</a
-                                            ><a
-                                                href="#"
-                                                class="btn btn-sm btn-cart"
-                                                onclick="
-                                                    addToCart('Blockchain')
-                                                "
-                                                ><span
-                                                    class="glyphicon glyphicon-shopping-cart"
-                                                ></span>
-                                                Mua</a
-                                            >
-                                        </div>
-                                    </div>
-                                    <div class="portfolio-info">
-                                        <h5>Blockchain cho mọi người</h5>
-                                        <p class="author">Melanie Swan</p>
-                                        <p class="price">160.000 ₫</p>
-                                    </div>
-                                </div>
-                            </div>
+                            
                             <div class="col-sm-4">
                                 <div class="portfolio-card">
                                     <div class="portfolio-img">
@@ -284,9 +93,9 @@
                                         />
                                         <div class="portfolio-overlay">
                                             <a
-                                                href="#"
+                                                href="../chitiet/khoahoc/vu-tru-trong-vo-hat-de.html"
                                                 class="btn btn-sm btn-light-custom"
-                                                >Xem</a
+                                                >Xem chi tiết</a
                                             ><a
                                                 href="#"
                                                 class="btn btn-sm btn-cart"
@@ -304,13 +113,150 @@
                                     </div>
                                     <div class="portfolio-info">
                                         <h5>Vũ trụ trong vỏ hạt dẻ</h5>
-                                        <p class="author">Brian Greene</p>
+                                        <p class="author">Stephen Hawking</p>
+                                        <p class="price">125.000 ₫</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-sm-4">
+                                <div class="portfolio-card">
+                                    <div class="portfolio-img">
+                                        <img
+                                            src="../images/tri-tue-nhan-tao.jpg"
+                                            alt="Trí tuệ nhân tạo"
+                                        />
+                                        <div class="portfolio-overlay">
+                                            <a
+                                                href="../chitiet/khoahoc/tri-tue-nhan-tao.html"
+                                                class="btn btn-sm btn-light-custom"
+                                                >Xem chi tiết</a
+                                            ><a
+                                                href="#"
+                                                class="btn btn-sm btn-cart"
+                                                onclick="
+                                                    addToCart(
+                                                        'Trí tuệ nhân tạo',
+                                                    )
+                                                "
+                                                ><span
+                                                    class="glyphicon glyphicon-shopping-cart"
+                                                ></span>
+                                                Mua</a
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-info">
+                                        <h5>Trí tuệ nhân tạo</h5>
+                                        <p class="author">Nhiều tác giả</p>
+                                        <p class="price">150.000 ₫</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-sm-4">
+                                <div class="portfolio-card">
+                                    <div class="portfolio-img">
+                                        <img
+                                            src="../images/khoa-hoc-du-lieu.jpg"
+                                            alt="Khoa học dữ liệu"
+                                        />
+                                        <div class="portfolio-overlay">
+                                            <a
+                                                href="../chitiet/khoahoc/khoa-hoc-du-lieu.html"
+                                                class="btn btn-sm btn-light-custom"
+                                                >Xem chi tiết</a
+                                            ><a
+                                                href="#"
+                                                class="btn btn-sm btn-cart"
+                                                onclick="
+                                                    addToCart(
+                                                        'Khoa học dữ liệu',
+                                                    )
+                                                "
+                                                ><span
+                                                    class="glyphicon glyphicon-shopping-cart"
+                                                ></span>
+                                                Mua</a
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-info">
+                                        <h5>Khoa học dữ liệu</h5>
+                                        <p class="author">Nhiều tác giả</p>
                                         <p class="price">130.000 ₫</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-sm-4">
+                                <div class="portfolio-card">
+                                    <div class="portfolio-img">
+                                        <img
+                                            src="../images/block-chain.jpg"
+                                            alt="Blockchain"
+                                        />
+                                        <div class="portfolio-overlay">
+                                            <a
+                                                href="../chitiet/khoahoc/block-chain.html"
+                                                class="btn btn-sm btn-light-custom"
+                                                >Xem chi tiết</a
+                                            ><a
+                                                href="#"
+                                                class="btn btn-sm btn-cart"
+                                                onclick="addToCart('Blockchain')"
+                                                ><span
+                                                    class="glyphicon glyphicon-shopping-cart"
+                                                ></span>
+                                                Mua</a
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-info">
+                                        <h5>Blockchain</h5>
+                                        <p class="author">Mark Gates</p>
+                                        <p class="price">110.000 ₫</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-sm-4">
+                                <div class="portfolio-card">
+                                    <div class="portfolio-img">
+                                        <img
+                                            src="../images/luoc-su-loai-nguoi.jpg"
+                                            alt="Lược sử loài người"
+                                        />
+                                        <div class="portfolio-overlay">
+                                            <a
+                                                href="../chitiet/khoahoc/luoc-su-loai-nguoi.html"
+                                                class="btn btn-sm btn-light-custom"
+                                                >Xem chi tiết</a
+                                            ><a
+                                                href="#"
+                                                class="btn btn-sm btn-cart"
+                                                onclick="
+                                                    addToCart(
+                                                        'Lược sử loài người',
+                                                    )
+                                                "
+                                                ><span
+                                                    class="glyphicon glyphicon-shopping-cart"
+                                                ></span>
+                                                Mua</a
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-info">
+                                        <h5>Lược sử loài người</h5>
+                                        <p class="author">Yuval Noah Harari</p>
+                                        <p class="price">160.000 ₫</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
                     <div class="col-md-3">
                         <div
                             style="
@@ -416,7 +362,7 @@
                                 href="../index.html#pricing"
                                 class="btn btn-primary-custom btn-sm"
                                 style="margin-top: 8px"
-                                >Xem gói</a
+                                >Xem chi tiết gói</a
                             >
                         </div>
                     </div>
@@ -456,32 +402,6 @@
             </div>
         </footer>
 
-        <button
-            id="cartToggleBtn"
-            class="cart-float-btn"
-            onclick="toggleCart()"
-        >
-            <span class="glyphicon glyphicon-shopping-cart"></span
-            ><span class="cart-badge" id="cartBadge">0</span>
-        </button>
-        <div id="cartWidget" class="cart-widget" style="display: none">
-            <div class="cart-header">
-                <span class="glyphicon glyphicon-shopping-cart"></span> Giỏ hàng
-                (<span id="cartCount">0</span>)<button
-                    class="close-cart"
-                    onclick="toggleCart()"
-                >
-                    ×
-                </button>
-            </div>
-            <ul id="cartList" class="cart-list"></ul>
-            <div class="cart-footer">
-                <strong>Tổng: <span id="cartTotal">0</span> ₫</strong
-                ><button class="btn btn-primary-custom btn-sm">
-                    Thanh toán
-                </button>
-            </div>
-        </div>
         <div id="toast" class="toast-msg" style="display: none"></div>
 
         <script src="../js/jquery.min.js"></script>
