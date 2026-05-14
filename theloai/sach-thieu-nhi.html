@@ -1,168 +1,509 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Thiếu nhi – K'Bookstore</title>
-  <link rel="stylesheet" href="css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-  <link rel="stylesheet" href="css/style.css"/>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Thiếu nhi – K'Bookstore</title>
+        <link rel="stylesheet" href="../css/bootstrap.min.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link rel="stylesheet" href="../css/style.css" />
+    </head>
+    <body>
+        <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button
+                        type="button"
+                        class="navbar-toggle collapsed"
+                        data-toggle="collapse"
+                        data-target="#navbarMenu"
+                    >
+                        <span class="sr-only">Toggle</span
+                        ><span class="icon-bar"></span
+                        ><span class="icon-bar"></span
+                        ><span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../index.html"
+                        ><span class="brand-k">K'</span
+                        ><span class="brand-book">Bookstore</span></a
+                    >
+                </div>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a
+                                class="nav-link-custom"
+                                href="../index.html#about"
+                                ><i class="fa fa-info-circle"></i> Giới thiệu</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="nav-link-custom"
+                                href="../index.html#services"
+                                ><i class="fa fa-th-list"></i> Thể loại</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="nav-link-custom"
+                                href="../index.html#portfolio"
+                                ><i class="fa fa-star"></i> Nổi bật</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="nav-link-custom"
+                                href="../index.html#pricing"
+                                ><i class="fa fa-ticket"></i> Gói thành viên</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="nav-link-custom"
+                                href="../index.html#contact"
+                                ><i class="fa fa-paper-plane"></i> Liên hệ</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarMenu">
-        <span class="sr-only">Toggle</span>
-        <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html"><span class="brand-k">K'</span><span class="brand-book">Bookstore</span></a>
-    </div>
-    <div class="collapse navbar-collapse" id="navbarMenu">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a class="nav-link-custom" href="index.html#about"><i class="fa fa-info-circle"></i> Giới thiệu</a></li>
-        <li><a class="nav-link-custom" href="index.html#services"><i class="fa fa-th-list"></i> Thể loại</a></li>
-        <li><a class="nav-link-custom" href="index.html#portfolio"><i class="fa fa-star"></i> Nổi bật</a></li>
-        <li><a class="nav-link-custom" href="index.html#pricing"><i class="fa fa-ticket"></i> Gói thành viên</a></li>
-        <li><a class="nav-link-custom" href="index.html#contact"><i class="fa fa-paper-plane"></i> Liên hệ</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+        <section id="banner">
+            <div
+                class="carousel-slide"
+                style="
+                    background: linear-gradient(135deg, #f12711, #f5af19);
+                    height: 260px;
+                    padding-top: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                "
+            >
+                <div class="carousel-caption-custom">
+                    <h1>
+                        <span class="glyphicon glyphicon-heart"></span> Sách
+                        Thiếu nhi
+                    </h1>
+                    <p>Thế giới kỳ diệu cho các bé yêu</p>
+                </div>
+            </div>
+        </section>
 
-<section id="banner">
-  <div class="carousel-slide" style="background:linear-gradient(135deg,#f12711,#f5af19);height:260px;padding-top:50px;display:flex;align-items:center;justify-content:center;">
-    <div class="carousel-caption-custom">
-      <h1><span class="glyphicon glyphicon-heart"></span> Sách Thiếu nhi</h1>
-      <p>Thế giới kỳ diệu cho các bé yêu</p>
-    </div>
-  </div>
-</section>
+        <section class="section-pad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="section-title">
+                            <h2>Sách Thiếu nhi nổi bật</h2>
+                            <div
+                                class="title-bar"
+                                style="margin: 0 0 30px"
+                            ></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="portfolio-card">
+                                    <div class="portfolio-img">
+                                        <img
+                                            src="../images/thieunhi1.jpg"
+                                            alt="Dế Mèn"
+                                            onerror="
+                                                this.src =
+                                                    'https://via.placeholder.com/220x220/FF8C00/fff?text=Dế+Mèn'
+                                            "
+                                        />
+                                        <div class="portfolio-overlay">
+                                            <a
+                                                href="#"
+                                                class="btn btn-sm btn-light-custom"
+                                                >Xem</a
+                                            ><a
+                                                href="#"
+                                                class="btn btn-sm btn-cart"
+                                                onclick="
+                                                    addToCart(
+                                                        'Dế Mèn phiêu lưu ký',
+                                                    )
+                                                "
+                                                ><span
+                                                    class="glyphicon glyphicon-shopping-cart"
+                                                ></span>
+                                                Mua</a
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-info">
+                                        <h5>Dế Mèn phiêu lưu ký</h5>
+                                        <p class="author">Tô Hoài</p>
+                                        <p class="price">45.000 ₫</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="portfolio-card">
+                                    <div class="portfolio-img">
+                                        <img
+                                            src="../images/thieunhi2.jpg"
+                                            alt="Harry Potter"
+                                            onerror="
+                                                this.src =
+                                                    'https://via.placeholder.com/220x220/4A90E2/fff?text=Harry+Potter'
+                                            "
+                                        />
+                                        <div class="portfolio-overlay">
+                                            <a
+                                                href="#"
+                                                class="btn btn-sm btn-light-custom"
+                                                >Xem</a
+                                            ><a
+                                                href="#"
+                                                class="btn btn-sm btn-cart"
+                                                onclick="
+                                                    addToCart('Harry Potter')
+                                                "
+                                                ><span
+                                                    class="glyphicon glyphicon-shopping-cart"
+                                                ></span>
+                                                Mua</a
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-info">
+                                        <h5>Harry Potter (Tập 1)</h5>
+                                        <p class="author">J.K. Rowling</p>
+                                        <p class="price">80.000 ₫</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="portfolio-card">
+                                    <div class="portfolio-img">
+                                        <img
+                                            src="../images/thieunhi3.jpg"
+                                            alt="Cổ Grim"
+                                            onerror="
+                                                this.src =
+                                                    'https://via.placeholder.com/220x220/50B848/fff?text=Cổ+Grim'
+                                            "
+                                        />
+                                        <div class="portfolio-overlay">
+                                            <a
+                                                href="#"
+                                                class="btn btn-sm btn-light-custom"
+                                                >Xem</a
+                                            ><a
+                                                href="#"
+                                                class="btn btn-sm btn-cart"
+                                                onclick="
+                                                    addToCart('Truyện cổ Grim')
+                                                "
+                                                ><span
+                                                    class="glyphicon glyphicon-shopping-cart"
+                                                ></span>
+                                                Mua</a
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-info">
+                                        <h5>Truyện cổ Grim</h5>
+                                        <p class="author">Anh em Grim</p>
+                                        <p class="price">55.000 ₫</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="portfolio-card">
+                                    <div class="portfolio-img">
+                                        <img
+                                            src="../images/thieunhi4.jpg"
+                                            alt="Nghìn lẻ một đêm"
+                                            onerror="
+                                                this.src =
+                                                    'https://via.placeholder.com/220x220/9B59B6/fff?text=Nghìn+lẻ+một+đêm'
+                                            "
+                                        />
+                                        <div class="portfolio-overlay">
+                                            <a
+                                                href="#"
+                                                class="btn btn-sm btn-light-custom"
+                                                >Xem</a
+                                            ><a
+                                                href="#"
+                                                class="btn btn-sm btn-cart"
+                                                onclick="
+                                                    addToCart(
+                                                        'Nghìn lẻ một đêm',
+                                                    )
+                                                "
+                                                ><span
+                                                    class="glyphicon glyphicon-shopping-cart"
+                                                ></span>
+                                                Mua</a
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-info">
+                                        <h5>Nghìn lẻ một đêm</h5>
+                                        <p class="author">Nhiều tác giả</p>
+                                        <p class="price">65.000 ₫</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="portfolio-card">
+                                    <div class="portfolio-img">
+                                        <img
+                                            src="../images/thieunhi5.jpg"
+                                            alt="Chú mèo đi hia"
+                                            onerror="
+                                                this.src =
+                                                    'https://via.placeholder.com/220x220/F39C12/fff?text=Chú+mèo+đi+hia'
+                                            "
+                                        />
+                                        <div class="portfolio-overlay">
+                                            <a
+                                                href="#"
+                                                class="btn btn-sm btn-light-custom"
+                                                >Xem</a
+                                            ><a
+                                                href="#"
+                                                class="btn btn-sm btn-cart"
+                                                onclick="
+                                                    addToCart('Chú mèo đi hia')
+                                                "
+                                                ><span
+                                                    class="glyphicon glyphicon-shopping-cart"
+                                                ></span>
+                                                Mua</a
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-info">
+                                        <h5>Chú mèo đi hia</h5>
+                                        <p class="author">Charles Perrault</p>
+                                        <p class="price">30.000 ₫</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="portfolio-card">
+                                    <div class="portfolio-img">
+                                        <img
+                                            src="../images/thieunhi6.jpg"
+                                            alt="Tô màu"
+                                            onerror="
+                                                this.src =
+                                                    'https://via.placeholder.com/220x220/E74C3C/fff?text=Tô+màu'
+                                            "
+                                        />
+                                        <div class="portfolio-overlay">
+                                            <a
+                                                href="#"
+                                                class="btn btn-sm btn-light-custom"
+                                                >Xem</a
+                                            ><a
+                                                href="#"
+                                                class="btn btn-sm btn-cart"
+                                                onclick="
+                                                    addToCart('Bộ sách tô màu')
+                                                "
+                                                ><span
+                                                    class="glyphicon glyphicon-shopping-cart"
+                                                ></span>
+                                                Mua</a
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-info">
+                                        <h5>Bộ sách tô màu sáng tạo</h5>
+                                        <p class="author">Nhiều họa sĩ</p>
+                                        <p class="price">40.000 ₫</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div
+                            style="
+                                background: #f8f5f0;
+                                border-radius: 8px;
+                                padding: 24px;
+                                margin-bottom: 24px;
+                            "
+                        >
+                            <h4
+                                style="
+                                    color: #2c3e50;
+                                    border-bottom: 2px solid #e67e22;
+                                    padding-bottom: 10px;
+                                    margin-bottom: 16px;
+                                "
+                            >
+                                Các thể loại khác
+                            </h4>
+                            <ul style="list-style: none; padding: 0">
+                                <li
+                                    style="
+                                        padding: 8px 0;
+                                        border-bottom: 1px solid #e0d9d0;
+                                    "
+                                >
+                                    <a href="sach-van-hoc.html"
+                                        ><span
+                                            class="glyphicon glyphicon-book"
+                                        ></span>
+                                        Văn học</a
+                                    >
+                                </li>
+                                <li
+                                    style="
+                                        padding: 8px 0;
+                                        border-bottom: 1px solid #e0d9d0;
+                                    "
+                                >
+                                    <a href="sach-kinh-te.html"
+                                        ><span
+                                            class="glyphicon glyphicon-briefcase"
+                                        ></span>
+                                        Kinh tế &amp; Kinh doanh</a
+                                    >
+                                </li>
+                                <li
+                                    style="
+                                        padding: 8px 0;
+                                        border-bottom: 1px solid #e0d9d0;
+                                    "
+                                >
+                                    <a href="sach-khoa-hoc-cong-nghe.html"
+                                        ><span
+                                            class="glyphicon glyphicon-flash"
+                                        ></span>
+                                        Khoa học &amp; Công nghệ</a
+                                    >
+                                </li>
+                                <li
+                                    style="
+                                        padding: 8px 0;
+                                        border-bottom: 1px solid #e0d9d0;
+                                    "
+                                >
+                                    <a href="sach-ngoai-van.html"
+                                        ><span
+                                            class="glyphicon glyphicon-globe"
+                                        ></span>
+                                        Sách Ngoại văn</a
+                                    >
+                                </li>
+                                <li style="padding: 8px 0">
+                                    <a href="sach-tam-ly-ky-nang-song.html"
+                                        ><span
+                                            class="glyphicon glyphicon-star"
+                                        ></span>
+                                        Tâm lý &amp; Kỹ năng sống</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                        <div
+                            style="
+                                background: #2c3e50;
+                                border-radius: 8px;
+                                padding: 24px;
+                                color: #fff;
+                                text-align: center;
+                            "
+                        >
+                            <span
+                                class="glyphicon glyphicon-gift"
+                                style="font-size: 36px; color: #e67e22"
+                            ></span>
+                            <h5 style="color: #fff; margin: 12px 0 8px">
+                                Ưu đãi hội viên
+                            </h5>
+                            <p style="font-size: 13px; opacity: 0.8">
+                                Giảm đến 40% với gói Kim Cương!
+                            </p>
+                            <a
+                                href="../index.html#pricing"
+                                class="btn btn-primary-custom btn-sm"
+                                style="margin-top: 8px"
+                                >Xem gói</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<section class="section-pad">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-9">
-        <div class="section-title">
-          <h2>Sách Thiếu nhi nổi bật</h2>
-          <div class="title-bar" style="margin:0 0 30px;"></div>
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row footer-top">
+                    <div class="col-md-6">
+                        <span class="footer-brand"
+                            ><span class="brand-k">K'</span
+                            ><span class="brand-book">Bookstore</span></span
+                        >
+                        <p>Nhà sách trực tuyến uy tín hàng đầu Việt Nam.</p>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <ul
+                            class="footer-links"
+                            style="
+                                display: inline-block;
+                                text-align: left;
+                                list-style: none;
+                                padding: 0;
+                            "
+                        >
+                            <li><a href="../index.html">Trang chủ</a></li>
+                            <li><a href="../about.html">Giới thiệu</a></li>
+                            <li><a href="../index.html#contact">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom text-center">
+                    <p>&copy; 2024 K'Bookstore. Tất cả quyền được bảo lưu.</p>
+                </div>
+            </div>
+        </footer>
+
+        <button
+            id="cartToggleBtn"
+            class="cart-float-btn"
+            onclick="toggleCart()"
+        >
+            <span class="glyphicon glyphicon-shopping-cart"></span
+            ><span class="cart-badge" id="cartBadge">0</span>
+        </button>
+        <div id="cartWidget" class="cart-widget" style="display: none">
+            <div class="cart-header">
+                <span class="glyphicon glyphicon-shopping-cart"></span> Giỏ hàng
+                (<span id="cartCount">0</span>)<button
+                    class="close-cart"
+                    onclick="toggleCart()"
+                >
+                    ×
+                </button>
+            </div>
+            <ul id="cartList" class="cart-list"></ul>
+            <div class="cart-footer">
+                <strong>Tổng: <span id="cartTotal">0</span> ₫</strong
+                ><button class="btn btn-primary-custom btn-sm">
+                    Thanh toán
+                </button>
+            </div>
         </div>
-        <div class="row">
-          <!-- 6 sách thiếu nhi, dùng ảnh placeholder, thêm tên sách phù hợp -->
-          <div class="col-sm-4">
-            <div class="portfolio-card">
-              <div class="portfolio-img">
-                <img src="images/thieunhi1.jpg" alt="Dế Mèn phiêu lưu ký" class="img-responsive" style="height:220px;object-fit:cover;" onerror="this.src='https://via.placeholder.com/220x220/FF8C00/fff?text=Dế+Mèn'"/>
-                <div class="portfolio-overlay">
-                  <a href="#" class="btn btn-sm btn-light-custom">Xem</a>
-                  <a href="#" class="btn btn-sm btn-cart" onclick="addToCart('Dế Mèn phiêu lưu ký')"><span class="glyphicon glyphicon-shopping-cart"></span> Mua</a>
-                </div>
-              </div>
-              <div class="portfolio-info"><h5>Dế Mèn phiêu lưu ký</h5><p class="author">Tô Hoài</p><p class="price">45.000 ₫</p></div>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="portfolio-card">
-              <div class="portfolio-img">
-                <img src="images/thieunhi2.jpg" alt="Harry Potter Hòn đá phù thủy" onerror="this.src='https://via.placeholder.com/220x220/4A90E2/fff?text=Harry+Potter'"/>
-                <div class="portfolio-overlay">
-                  <a href="#" class="btn btn-sm btn-light-custom">Xem</a>
-                  <a href="#" class="btn btn-sm btn-cart" onclick="addToCart('Harry Potter')"><span class="glyphicon glyphicon-shopping-cart"></span> Mua</a>
-                </div>
-              </div>
-              <div class="portfolio-info"><h5>Harry Potter (Tập 1)</h5><p class="author">J.K. Rowling</p><p class="price">80.000 ₫</p></div>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="portfolio-card">
-              <div class="portfolio-img">
-                <img src="images/thieunhi3.jpg" alt="Truyện cổ Grim" onerror="this.src='https://via.placeholder.com/220x220/50B848/fff?text=Cổ+Grim'"/>
-                <div class="portfolio-overlay">
-                  <a href="#" class="btn btn-sm btn-light-custom">Xem</a>
-                  <a href="#" class="btn btn-sm btn-cart" onclick="addToCart('Truyện cổ Grim')"><span class="glyphicon glyphicon-shopping-cart"></span> Mua</a>
-                </div>
-              </div>
-              <div class="portfolio-info"><h5>Truyện cổ Grim</h5><p class="author">Anh em Grim</p><p class="price">55.000 ₫</p></div>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="portfolio-card">
-              <div class="portfolio-img">
-                <img src="images/thieunhi4.jpg" alt="Nghìn lẻ một đêm" onerror="this.src='https://via.placeholder.com/220x220/9B59B6/fff?text=Nghìn+lẻ+một+đêm'"/>
-                <div class="portfolio-overlay">
-                  <a href="#" class="btn btn-sm btn-light-custom">Xem</a>
-                  <a href="#" class="btn btn-sm btn-cart" onclick="addToCart('Nghìn lẻ một đêm')"><span class="glyphicon glyphicon-shopping-cart"></span> Mua</a>
-                </div>
-              </div>
-              <div class="portfolio-info"><h5>Nghìn lẻ một đêm</h5><p class="author">Nhiều tác giả</p><p class="price">65.000 ₫</p></div>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="portfolio-card">
-              <div class="portfolio-img">
-                <img src="images/thieunhi5.jpg" alt="Chú mèo đi hia" onerror="this.src='https://via.placeholder.com/220x220/F39C12/fff?text=Chú+mèo+đi+hia'"/>
-                <div class="portfolio-overlay">
-                  <a href="#" class="btn btn-sm btn-light-custom">Xem</a>
-                  <a href="#" class="btn btn-sm btn-cart" onclick="addToCart('Chú mèo đi hia')"><span class="glyphicon glyphicon-shopping-cart"></span> Mua</a>
-                </div>
-              </div>
-              <div class="portfolio-info"><h5>Chú mèo đi hia</h5><p class="author">Charles Perrault</p><p class="price">30.000 ₫</p></div>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="portfolio-card">
-              <div class="portfolio-img">
-                <img src="images/thieunhi6.jpg" alt="Sách tô màu" onerror="this.src='https://via.placeholder.com/220x220/E74C3C/fff?text=Tô+màu'"/>
-                <div class="portfolio-overlay">
-                  <a href="#" class="btn btn-sm btn-light-custom">Xem</a>
-                  <a href="#" class="btn btn-sm btn-cart" onclick="addToCart('Bộ sách tô màu')"><span class="glyphicon glyphicon-shopping-cart"></span> Mua</a>
-                </div>
-              </div>
-              <div class="portfolio-info"><h5>Bộ sách tô màu sáng tạo</h5><p class="author">Nhiều họa sĩ</p><p class="price">40.000 ₫</p></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Sidebar -->
-      <div class="col-md-3">
-        <div style="background:#f8f5f0;border-radius:8px;padding:24px;margin-bottom:24px;">
-          <h4 style="color:#2c3e50;border-bottom:2px solid #e67e22;padding-bottom:10px;margin-bottom:16px;">Các thể loại khác</h4>
-          <ul style="list-style:none;padding:0;">
-            <li style="padding:8px 0;border-bottom:1px solid #e0d9d0;"><a href="./sach-van-hoc.html"><span class="glyphicon glyphicon-book"></span> Văn học</a></li>
-            <li style="padding:8px 0;border-bottom:1px solid #e0d9d0;"><a href="./sach-kinh-te.html"><span class="glyphicon glyphicon-briefcase"></span> Kinh tế &amp; Kinh doanh</a></li>
-            <li style="padding:8px 0;border-bottom:1px solid #e0d9d0;"><a href="./sach-khoa-hoc-cong-nghe.html"><span class="glyphicon glyphicon-flash"></span> Khoa học &amp; Công nghệ</a></li>
-            <li style="padding:8px 0;border-bottom:1px solid #e0d9d0;"><a href="./sach-ngoai-van.html"><span class="glyphicon glyphicon-globe"></span> Sách Ngoại văn</a></li>
-            <li style="padding:8px 0;"><a href="./sach-tam-ly-ky-nang-song.html"><span class="glyphicon glyphicon-star"></span> Tâm lý &amp; Kỹ năng sống</a></li>
-          </ul>
-        </div>
-        <div style="background:#2c3e50;border-radius:8px;padding:24px;color:#fff;text-align:center;">
-          <span class="glyphicon glyphicon-gift" style="font-size:36px;color:#e67e22;"></span>
-          <h5 style="color:#fff;margin:12px 0 8px;">Ưu đãi hội viên</h5>
-          <p style="font-size:13px;opacity:.8;">Giảm đến 40% với gói Kim Cương!</p>
-          <a href="index.html#pricing" class="btn btn-primary-custom btn-sm" style="margin-top:8px;">Xem gói</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+        <div id="toast" class="toast-msg" style="display: none"></div>
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="row footer-top">
-      <div class="col-md-6"><span class="footer-brand"><span class="brand-k">K'</span><span class="brand-book">Bookstore</span></span><p>Nhà sách trực tuyến uy tín hàng đầu Việt Nam.</p></div>
-      <div class="col-md-6 text-right"><ul class="footer-links" style="display:inline-block;text-align:left;"><li><a href="index.html">Trang chủ</a></li><li><a href="about.html">Giới thiệu</a></li><li><a href="index.html#contact">Liên hệ</a></li></ul></div>
-    </div>
-    <div class="footer-bottom text-center"><p>&copy; 2024 K'Bookstore. Tất cả quyền được bảo lưu.</p></div>
-  </div>
-</footer>
-
-<button id="cartToggleBtn" class="cart-float-btn" onclick="toggleCart()"><span class="glyphicon glyphicon-shopping-cart"></span><span class="cart-badge" id="cartBadge">0</span></button>
-<div id="cartWidget" class="cart-widget" style="display:none;"><div class="cart-header"><span class="glyphicon glyphicon-shopping-cart"></span> Giỏ hàng (<span id="cartCount">0</span>)<button class="close-cart" onclick="toggleCart()">×</button></div><ul id="cartList" class="cart-list"></ul><div class="cart-footer"><strong>Tổng: <span id="cartTotal">0</span> ₫</strong><button class="btn btn-primary-custom btn-sm">Thanh toán</button></div></div>
-<div id="toast" class="toast-msg" style="display:none;"></div>
-
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/script.js"></script>
-</body>
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/script.js"></script>
+    </body>
 </html>
